@@ -1,5 +1,36 @@
 [
     {
+        "accuracy": 0.4393,
+        "batch": 32,
+        "duration": 108146745323,
+        "lr": 0.1125951147618986,
+        "metric_acc": 0.4393,
+        "momentum": 0.8257070131080141,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomGrayscale_2",
+        "uid": "402ee5887cef7d284de5f8decf14e215",
+        "train_stat": {
+            "train_loss": 1.5536774720279207,
+            "test_loss": 1.5509784880537576,
+            "train_accuracy": 0.43802,
+            "gradient_norm": 0.858442402184714,
+            "samples_per_second": 1849.010471707502,
+            "best_accuracy": 0.4393,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 16.8,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 19406624.0,
+            "ram_usage_percent": 59.5,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 2795151.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17734.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.4334,
         "batch": 32,
         "duration": 48075915279,
@@ -7,6 +38,27 @@
         "momentum": 0.8257070131080141,
         "transform": "bf-v1-RandomAdjustSharpnes_RandomGrayscale_2",
         "uid": "0904294fe923d870e0045ac64a371210"
+    },
+    {
+        "accuracy": 0.3948,
+        "batch": 64,
+        "duration": 66446600644,
+        "lr": 0.5194076303624194,
+        "momentum": 0.5908452703278059,
+        "transform": "bf-v1-Grayscale_RandomAdjustSharpnes_2",
+        "uid": "98dbfd47d598e7fde077d5b56c846f5f"
+    },
+    {
+        "accuracy": 0.3675,
+        "batch": 32,
+        "duration": 42351044031,
+        "lr": 0.1125951147618986,
+        "momentum": 0.8257070131080141,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomGrayscale_2",
+        "uid": "0e9eb9cd6881f123f04e85183412c868",
+        "train_stat": {
+            "epoch_max": 50
+        }
     },
     {
         "accuracy": 0.2629,

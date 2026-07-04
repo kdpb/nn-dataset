@@ -1,0 +1,63 @@
+[
+    {
+        "accuracy": 0.3565,
+        "batch": 128,
+        "duration": 97440556189,
+        "lr": 0.2113099454504511,
+        "metric_acc": 0.3565,
+        "momentum": 0.5066355031442468,
+        "transform": "bf-v1-RandomCrop_RandomPosterize",
+        "uid": "f2b43fc11d3bfef95a342e700e760047",
+        "train_stat": {
+            "train_loss": 1.774361047598407,
+            "test_loss": 1.7685989443259904,
+            "train_accuracy": 0.35,
+            "gradient_norm": 0.613717258746673,
+            "samples_per_second": 2574.3646644558053,
+            "best_accuracy": 0.3565,
+            "best_epoch": 5,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.4,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 9815372.0,
+            "ram_usage_percent": 30.1,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 5195270.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17693.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3387,
+        "batch": 128,
+        "duration": 60017746440,
+        "lr": 0.2113099454504511,
+        "momentum": 0.5066355031442468,
+        "transform": "bf-v1-RandomCrop_RandomPosterize",
+        "uid": "838573ed061229adfe0c7615df5b7884"
+    },
+    {
+        "accuracy": 0.3288,
+        "batch": 128,
+        "duration": 38337600391,
+        "lr": 0.2113099454504511,
+        "momentum": 0.5066355031442468,
+        "transform": "bf-v1-RandomCrop_RandomPosterize",
+        "uid": "5b5d47fe76cfbb48858d5c573b713716",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.2,
+        "batch": 8,
+        "duration": 96350198563,
+        "lr": 0.0773966150107296,
+        "momentum": 0.924178156101549,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomEqualize_RandomPosterize",
+        "uid": "784353e5e54465d14c3a405357175bbb"
+    }
+]

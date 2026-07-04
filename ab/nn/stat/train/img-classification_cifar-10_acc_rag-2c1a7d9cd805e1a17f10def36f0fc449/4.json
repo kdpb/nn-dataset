@@ -1,0 +1,63 @@
+[
+    {
+        "accuracy": 0.2654,
+        "batch": 64,
+        "duration": 76754781729,
+        "lr": 0.0013331532553664813,
+        "metric_acc": 0.2654,
+        "momentum": 0.611898944166933,
+        "transform": "bf-v1-RandomSolarize_41",
+        "uid": "334ea63902a79675fb5bb5df1b89e3c8",
+        "train_stat": {
+            "train_loss": 2.0115681866855573,
+            "test_loss": 2.0120982425228044,
+            "train_accuracy": 0.26326,
+            "gradient_norm": 1.6481075440744637,
+            "samples_per_second": 2616.2075141647215,
+            "best_accuracy": 0.2654,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 1.2,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10392848.0,
+            "ram_usage_percent": 31.9,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 8603251.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17716.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.2628,
+        "batch": 64,
+        "duration": 46663670292,
+        "lr": 0.0013331532553664813,
+        "momentum": 0.611898944166933,
+        "transform": "bf-v1-RandomSolarize_41",
+        "uid": "71c00895a0b9b9b11dccc1666f76f70a"
+    },
+    {
+        "accuracy": 0.2325,
+        "batch": 1024,
+        "duration": 50191744062,
+        "lr": 0.0008416909887150359,
+        "momentum": 0.9912662105756029,
+        "transform": "bf-v1-RandomCrop_CenterCrop_5",
+        "uid": "7e3e6fb2b5b74260e2b614a62e372fdc"
+    },
+    {
+        "accuracy": 0.2275,
+        "batch": 1024,
+        "duration": 55115544356,
+        "lr": 0.002812268451625097,
+        "momentum": 0.775691597251892,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAutocontrast_CenterCrop",
+        "uid": "12998f8861b69027d229faf59b4d27d2",
+        "train_stat": {
+            "epoch_max": 5
+        }
+    }
+]

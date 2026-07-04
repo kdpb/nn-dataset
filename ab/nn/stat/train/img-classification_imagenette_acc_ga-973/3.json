@@ -1,5 +1,37 @@
 [
     {
+        "accuracy": 0.5857324840764331,
+        "batch": 1,
+        "dropout": 0.36120107132460194,
+        "duration": 574919329754,
+        "lr": 0.007450841191305361,
+        "metric_acc": 0.5857324840764331,
+        "momentum": 0.6699882028825652,
+        "transform": "git_processor",
+        "uid": "d50db1425094ac2aa79a708b3726caac",
+        "train_stat": {
+            "train_loss": 1.4732649721621152,
+            "test_loss": 1.6452172652606138,
+            "train_accuracy": 0.6256204456648009,
+            "gradient_norm": 3.5424331173619035e-09,
+            "samples_per_second": 47.57000361037574,
+            "best_accuracy": 0.5857324840764331,
+            "best_epoch": 3,
+            "epoch_max": 5,
+            "cpu_count": 32,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 6.9,
+            "total_ram_kb": 131724388.0,
+            "occupied_ram_kb": 17707292.0,
+            "ram_usage_percent": 17.4,
+            "gpu_type": "NVIDIA GeForce RTX 3090",
+            "gpu_memory_kb": 312625.0,
+            "gpu_total_memory_kb": 24703168.0,
+            "occupied_gpu_memory_kb": 307021.5,
+            "gpu_memory_usage_percent": 1.24
+        }
+    },
+    {
         "accuracy": 0.5556687898089172,
         "batch": 2,
         "dropout": 0.24494983359581757,
@@ -8,6 +40,26 @@
         "momentum": 0.20017647281497852,
         "transform": "norm_299",
         "uid": "b877a4a20d36239408889fc6568bff3e"
+    },
+    {
+        "accuracy": 0.4175796178343949,
+        "batch": 4,
+        "dropout": 0.28521145455355307,
+        "duration": 283675789158,
+        "lr": 0.00011928290773075925,
+        "momentum": 0.9987797893363045,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAdjustSharpnes_3",
+        "uid": "9b36020decf818e202a3f78684194e9e"
+    },
+    {
+        "accuracy": 0.39414012738853504,
+        "batch": 1,
+        "dropout": 0.165844456523358,
+        "duration": 277760709451,
+        "lr": 0.003342278665783363,
+        "momentum": 0.19632265383915515,
+        "transform": "bf-v1-RandomHorizontalFlip_5",
+        "uid": "f8ffbe66a9479d3158b14b90a3e54279"
     },
     {
         "accuracy": 0.26726114649681526,

@@ -1,0 +1,60 @@
+[
+    {
+        "accuracy": 0.2965,
+        "batch": 128,
+        "duration": 41619044906,
+        "lr": 0.002800521516024249,
+        "metric_acc": 0.2965,
+        "momentum": 0.6734779538259692,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomPosterize",
+        "uid": "d01b8bf862980245fa19e43cd74a9b2c",
+        "train_stat": {
+            "train_loss": 1.9495875567121579,
+            "test_loss": 1.9430566316918483,
+            "train_accuracy": 0.29048,
+            "gradient_norm": 0.9999990555776846,
+            "samples_per_second": 2422.3568582579755,
+            "best_accuracy": 0.2965,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.8,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10095208.0,
+            "ram_usage_percent": 30.9,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 5195270.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 18116.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.2809,
+        "batch": 2,
+        "duration": 197206526344,
+        "lr": 0.0009057141615282871,
+        "momentum": 0.3080719370756334,
+        "transform": "bf-v1-RandomAutocontrast_Pad_4",
+        "uid": "d3f0f1d7300a9b14c8bb530f2c2685e8"
+    },
+    {
+        "accuracy": 0.2769,
+        "batch": 32,
+        "duration": 29134121099,
+        "lr": 3.397932049376152e-05,
+        "momentum": 0.9821491084891832,
+        "transform": "bf-v1-RandomCrop_RandomPosterize_RandomRotation",
+        "uid": "b6ab6aebef1f9068c8875a1735ec29d4"
+    },
+    {
+        "accuracy": 0.2682,
+        "batch": 128,
+        "duration": 23552455950,
+        "lr": 0.002800521516024249,
+        "momentum": 0.6734779538259692,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomPosterize",
+        "uid": "b060724dff2b4a721c47e9eb557f54b8"
+    }
+]

@@ -1,5 +1,48 @@
 [
     {
+        "accuracy": 0.3126,
+        "batch": 16,
+        "duration": 13570984904,
+        "lr": 0.007532528699752299,
+        "momentum": 0.8769826409036643,
+        "transform": "bf-v1-RandomHorizontalFlip_CenterCrop_Pad",
+        "uid": "afe77b44356d3e0758ef2f7afd98dce3",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3021,
+        "batch": 16,
+        "duration": 32907917833,
+        "lr": 0.007532528699752299,
+        "metric_acc": 0.3021,
+        "momentum": 0.8769826409036643,
+        "transform": "bf-v1-RandomHorizontalFlip_CenterCrop_Pad",
+        "uid": "177866799ac21c33a6a8c4b88d636f87",
+        "train_stat": {
+            "train_loss": 1.9068423678588866,
+            "test_loss": 1.9003294109344482,
+            "train_accuracy": 0.30782,
+            "gradient_norm": 1.1976844575162822,
+            "samples_per_second": 1519.3952672132984,
+            "best_accuracy": 0.3021,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.8,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 11798812.0,
+            "ram_usage_percent": 36.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 14819109.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17685.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.2992,
         "batch": 16,
         "duration": 15481337525,
@@ -7,6 +50,15 @@
         "momentum": 0.8769826409036643,
         "transform": "bf-v1-RandomHorizontalFlip_CenterCrop_Pad",
         "uid": "f3a979d60eff84e6528b4fe7fa94660d"
+    },
+    {
+        "accuracy": 0.2971,
+        "batch": 8,
+        "duration": 19367455932,
+        "lr": 0.44360400036686515,
+        "momentum": 0.20913141924243872,
+        "transform": "bf-v1-RandomHorizontalFlip_Pad_CenterCrop",
+        "uid": "cb17908997846d632064765dabf967cb"
     },
     {
         "accuracy": 0.26,
@@ -27,5 +79,14 @@
         "momentum": 0.9,
         "transform": "norm_256_flip",
         "uid": "268985784c034788d34ad31d0305cb7f"
+    },
+    {
+        "accuracy": 0.2363,
+        "batch": 64,
+        "duration": 201081646467,
+        "lr": 0.01524340249630679,
+        "momentum": 0.8470455073095066,
+        "transform": "echo_512_flip",
+        "uid": "15bd0450d5a9ee9fe7e27f22b55878ba"
     }
 ]

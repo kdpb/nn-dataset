@@ -1,0 +1,90 @@
+[
+    {
+        "accuracy": 0.3366,
+        "batch": 8,
+        "duration": 54030035252,
+        "lr": 0.03248811102395138,
+        "metric_acc": 0.3366,
+        "momentum": 0.044050802457287874,
+        "transform": "norm_64_flip",
+        "uid": "e70dc6a6b6ab57f37f7150c7be877ccd",
+        "train_stat": {
+            "train_loss": 1.786661721973419,
+            "test_loss": 1.779897996044159,
+            "train_accuracy": 0.33404,
+            "gradient_norm": 2.172898368455368,
+            "samples_per_second": 1850.235936989285,
+            "best_accuracy": 0.3366,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 1.3,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 11926856.0,
+            "ram_usage_percent": 36.6,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 14819109.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17694.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3349,
+        "batch": 8,
+        "duration": 31628126706,
+        "lr": 0.03248811102395138,
+        "momentum": 0.044050802457287874,
+        "transform": "norm_64_flip",
+        "uid": "5509d4da010aee672623e9c9d6acd6cf"
+    },
+    {
+        "accuracy": 0.3249,
+        "batch": 8,
+        "duration": 25193451090,
+        "lr": 0.03248811102395138,
+        "momentum": 0.044050802457287874,
+        "transform": "norm_64_flip",
+        "uid": "50f3634709492d4b58f34ba6eb2296e2",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.2519,
+        "batch": 1024,
+        "duration": 25561120300,
+        "lr": 0.1785429846091612,
+        "momentum": 0.12258792343802227,
+        "transform": "bf-v1-CenterCrop_RandomRotation_2",
+        "uid": "5a9e36852711856b4d3fe228f870df6d"
+    },
+    {
+        "accuracy": 0.1998,
+        "batch": 32,
+        "duration": 28269835116,
+        "lr": 0.0005400063346389223,
+        "momentum": 0.19435908561739257,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomSolarize_2",
+        "uid": "a6ac740d6517eb202e1aadfa2d299032"
+    },
+    {
+        "accuracy": 0.1694,
+        "batch": 1024,
+        "duration": 39875228606,
+        "lr": 0.006638148023694078,
+        "momentum": 0.6618251818630283,
+        "transform": "bf-v1-CenterCrop_RandomAutocontrast_Pad",
+        "uid": "fdc745e7af8d95fbb907d571bc4b5c88"
+    },
+    {
+        "accuracy": 0.1456,
+        "batch": 16,
+        "duration": 31547633657,
+        "lr": 3.1196359151682174e-05,
+        "momentum": 0.47747702927908087,
+        "transform": "bf-v1-CenterCrop_RandomPosterize_5",
+        "uid": "0767cf3a0872bce93ce8157771caa5f8"
+    }
+]

@@ -8,5 +8,59 @@
         "momentum": 0.7259544808275548,
         "transform": "bf-v1-Pad_RandomAdjustSharpnes_RandomAutocontrast",
         "uid": "45be7b6fa4165acd33a3a5900ac17d88"
+    },
+    {
+        "accuracy": 0.40254777070063696,
+        "batch": 2,
+        "dropout": 0.430896672701883,
+        "duration": 755164873526,
+        "lr": 0.04664576431980767,
+        "momentum": 0.3411239547344177,
+        "transform": "bf-v1-RandomRotation_RandomAutocontrast_3",
+        "uid": "cc1b1857bbd4d399b5f2d37ea8a6f571",
+        "train_stat": {
+            "train_loss": 1.7862906516575259,
+            "test_loss": 1.934486610122,
+            "train_accuracy": 0.43098532051959026,
+            "gradient_norm": 0.008849121599221776,
+            "samples_per_second": 46.38919192302181,
+            "best_accuracy": 0.40254777070063696,
+            "best_epoch": 4,
+            "epoch_max": 5,
+            "cpu_count": 32,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 7.2,
+            "total_ram_kb": 131727448.0,
+            "occupied_ram_kb": 5276996.0,
+            "ram_usage_percent": 6.6,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 692075.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 671812.5,
+            "gpu_memory_usage_percent": 2.72
+        }
+    },
+    {
+        "accuracy": 0.3742675159235669,
+        "batch": 32,
+        "dropout": 0.2854161847123811,
+        "duration": 624479977810,
+        "lr": 0.018298554436290724,
+        "momentum": 0.3142732484854178,
+        "transform": "bf-v1-RandomAutocontrast_RandomAdjustSharpnes_5",
+        "uid": "239d7b1ba8d600c4ed723421875063a7"
+    },
+    {
+        "accuracy": 0.2749044585987261,
+        "batch": 1,
+        "dropout": 0.09244020633896505,
+        "duration": 610106156846,
+        "lr": 0.0008823005151661207,
+        "momentum": 0.1065248806258251,
+        "transform": "bf-v1-GaussianBlur_57",
+        "uid": "5934e29b0b7a6512a7bf927040087caa",
+        "train_stat": {
+            "epoch_max": 5
+        }
     }
 ]

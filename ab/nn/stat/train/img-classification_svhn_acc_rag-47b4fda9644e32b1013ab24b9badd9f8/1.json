@@ -1,5 +1,36 @@
 [
     {
+        "accuracy": 0.30078365089121084,
+        "batch": 64,
+        "duration": 181439299761,
+        "lr": 0.029432308159806436,
+        "metric_acc": 0.30078365089121084,
+        "momentum": 0.6360681298113142,
+        "transform": "bf-v1-Pad_RandomPosterize_RandomAutocontrast",
+        "uid": "323098fe8913dc5a9b4afeff20fc71e9",
+        "train_stat": {
+            "train_loss": 2.018122563924331,
+            "test_loss": 1.9698855188613442,
+            "train_accuracy": 0.27069085548138744,
+            "gradient_norm": 2.999998804287476,
+            "samples_per_second": 403.75590566752453,
+            "best_accuracy": 0.30078365089121084,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "cpu_count": 128,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 8.4,
+            "total_ram_kb": 263708948.0,
+            "occupied_ram_kb": 19932512.0,
+            "ram_usage_percent": 9.3,
+            "gpu_type": "NVIDIA GeForce RTX 3090",
+            "gpu_memory_kb": 168358.5,
+            "gpu_total_memory_kb": 24703168.0,
+            "occupied_gpu_memory_kb": 16886.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.2219575906576521,
         "batch": 1024,
         "duration": 22520299560,
@@ -9,6 +40,15 @@
         "uid": "bd4414e21c9c1fb78cbb56e70b004a51"
     },
     {
+        "accuracy": 0.19764136447449293,
+        "batch": 512,
+        "duration": 24100065738,
+        "lr": 0.006853453908822883,
+        "momentum": 0.12321228623337788,
+        "transform": "bf-v1-RandomHorizontalFlip_Pad_5",
+        "uid": "826c6e40287cc1fe5e96adf55f5fb3cd"
+    },
+    {
         "accuracy": 0.1958743085433313,
         "batch": 16,
         "duration": 134290113328,
@@ -16,5 +56,14 @@
         "momentum": 0.4140670646741995,
         "transform": "norm_299",
         "uid": "94553ad575d9644257daf108d9b54d1e"
+    },
+    {
+        "accuracy": 0.18592501536570374,
+        "batch": 2048,
+        "duration": 34423658748,
+        "lr": 1.6836045366954018e-05,
+        "momentum": 0.6368572176955349,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomCrop_Pad",
+        "uid": "4bed08340997c220541bf30ae58469a5"
     }
 ]

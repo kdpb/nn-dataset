@@ -1,0 +1,63 @@
+[
+    {
+        "accuracy": 0.3485,
+        "batch": 16,
+        "duration": 344139494184,
+        "lr": 0.2131619179152541,
+        "metric_acc": 0.3485,
+        "momentum": 0.4735114698768351,
+        "transform": "bf-v1-RandomAdjustSharpnes_GaussianBlur_5",
+        "uid": "5e1891b99ef089ce36fc0546237f23d0",
+        "train_stat": {
+            "train_loss": 1.753522938861847,
+            "test_loss": 1.748105869293213,
+            "train_accuracy": 0.34964,
+            "gradient_norm": 0.9526505427584486,
+            "samples_per_second": 766.270561802364,
+            "best_accuracy": 0.3485,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 3.8,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10516508.0,
+            "ram_usage_percent": 32.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 3212688.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17688.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3429,
+        "batch": 16,
+        "duration": 197597511091,
+        "lr": 0.2131619179152541,
+        "momentum": 0.4735114698768351,
+        "transform": "bf-v1-RandomAdjustSharpnes_GaussianBlur_5",
+        "uid": "4a5c3f0d04abe301dab879442ce1d2db"
+    },
+    {
+        "accuracy": 0.3366,
+        "batch": 16,
+        "duration": 195595389139,
+        "lr": 0.2131619179152541,
+        "momentum": 0.4735114698768351,
+        "transform": "bf-v1-RandomAdjustSharpnes_GaussianBlur_5",
+        "uid": "a8983ff0a44a73011a0eb086e37e75e3",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3159,
+        "batch": 64,
+        "duration": 116508050488,
+        "lr": 0.2856466423113701,
+        "momentum": 0.9020008094268018,
+        "transform": "bf-v1-RandomCrop_RandomAdjustSharpnes_Pad",
+        "uid": "95891fca611ac23879df98672a88e4ea"
+    }
+]

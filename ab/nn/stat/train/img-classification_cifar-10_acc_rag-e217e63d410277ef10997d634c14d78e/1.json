@@ -9,6 +9,49 @@
         "uid": "4b5876b078147fded1d791987fbd842e"
     },
     {
+        "accuracy": 0.4244,
+        "batch": 2,
+        "duration": 108377132937,
+        "lr": 0.06305401245025277,
+        "metric_acc": 0.4244,
+        "momentum": 0.6822072199360367,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomSolarize_2",
+        "uid": "5868f14755ffcd27d1de1bac272adcd4",
+        "train_stat": {
+            "train_loss": 1.7945105485583284,
+            "test_loss": 1.78012015926037,
+            "train_accuracy": 0.42304,
+            "gradient_norm": 0.9999998600565443,
+            "samples_per_second": 461.3522321376037,
+            "best_accuracy": 0.4244,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 18.2,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 15400044.0,
+            "ram_usage_percent": 47.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 12415353.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17982.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.4125,
+        "batch": 2,
+        "duration": 53940776538,
+        "lr": 0.06305401245025277,
+        "momentum": 0.6822072199360367,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomSolarize_2",
+        "uid": "5868f14755ffcd27d1de1bac272adcd4",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
         "accuracy": 0.3599,
         "batch": 32,
         "duration": 68720690991,
@@ -27,5 +70,14 @@
         "momentum": 0.9,
         "transform": "norm_256_flip",
         "uid": "268985784c034788d34ad31d0305cb7f"
+    },
+    {
+        "accuracy": 0.1324,
+        "batch": 2048,
+        "duration": 12869822848,
+        "lr": 0.00951196179327962,
+        "momentum": 0.37668531314931153,
+        "transform": "bf-v1-RandomCrop_RandomHorizontalFlip_5",
+        "uid": "2159eca9155e45280910809eb4c034d9"
     }
 ]

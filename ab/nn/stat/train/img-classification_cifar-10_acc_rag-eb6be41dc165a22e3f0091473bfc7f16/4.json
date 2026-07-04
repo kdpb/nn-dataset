@@ -1,0 +1,78 @@
+[
+    {
+        "accuracy": 0.307,
+        "batch": 1024,
+        "duration": 85195991306,
+        "lr": 0.13194339637397903,
+        "metric_acc": 0.307,
+        "momentum": 0.6927814455739398,
+        "transform": "norm_64_flip",
+        "uid": "6caff62b7284aa9552057e0df8f8e93d",
+        "train_stat": {
+            "train_loss": 1.9143800565174647,
+            "test_loss": 1.9091820240020752,
+            "train_accuracy": 0.30758,
+            "gradient_norm": 0.5787964815790348,
+            "samples_per_second": 2364.3580611679167,
+            "best_accuracy": 0.307,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 1.2,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10744532.0,
+            "ram_usage_percent": 32.9,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 8603251.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17691.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.294,
+        "batch": 1024,
+        "duration": 53126785170,
+        "lr": 0.13194339637397903,
+        "momentum": 0.6927814455739398,
+        "transform": "norm_64_flip",
+        "uid": "889b9a2c24b83d7e725f286cfa7939af"
+    },
+    {
+        "accuracy": 0.2562,
+        "batch": 2,
+        "duration": 235000445931,
+        "lr": 0.00022098109943401628,
+        "momentum": 0.1954169499847488,
+        "transform": "bf-v1-CenterCrop_RandomHorizontalFlip_2",
+        "uid": "3e8010a08d4194caa4b108cb7b5ef809"
+    },
+    {
+        "accuracy": 0.2446,
+        "batch": 4096,
+        "duration": 49402020467,
+        "lr": 0.05258982491389705,
+        "momentum": 0.7323654210316766,
+        "transform": "bf-v1-RandomHorizontalFlip_CenterCrop_5",
+        "uid": "951eabfbd256f5b5541bcbcf82d26019"
+    },
+    {
+        "accuracy": 0.2312,
+        "batch": 2,
+        "duration": 234033400318,
+        "lr": 8.323102213149086e-05,
+        "momentum": 0.34270187841234834,
+        "transform": "norm_64_flip",
+        "uid": "08ea4de64c36fb99914c3411773371cb"
+    },
+    {
+        "accuracy": 0.1459,
+        "batch": 16,
+        "duration": 68092609715,
+        "lr": 1.2683194957168785e-05,
+        "momentum": 0.3369500495183049,
+        "transform": "bf-v1-RandomHorizontalFlip_CenterCrop_Pad",
+        "uid": "10a2b544d9c9689bef78bf870d16b1d0"
+    }
+]

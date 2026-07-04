@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.4795,
+        "batch": 128,
+        "duration": 59766131760,
+        "lr": 0.11991869773632235,
+        "momentum": 0.07800483335907105,
+        "transform": "bf-v1-RandomCrop_Pad_4",
+        "uid": "57cc24397b429711e7a80a4dd154d0a8"
+    },
+    {
+        "accuracy": 0.4707,
+        "batch": 4,
+        "duration": 203011982318,
+        "lr": 0.05796531943044045,
+        "momentum": 0.893866945670379,
+        "transform": "bf-v1-Pad_RandomAdjustSharpnes_RandomAutocontrast",
+        "uid": "be6c3e04104afd70e6d298b206589279"
+    },
+    {
+        "accuracy": 0.4692,
+        "batch": 4,
+        "duration": 136912130534,
+        "lr": 0.05796531943044045,
+        "momentum": 0.893866945670379,
+        "transform": "bf-v1-Pad_RandomAdjustSharpnes_RandomAutocontrast",
+        "uid": "e8cfa7c69379015d475af4ac8635c54e",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.4432,
+        "batch": 4,
+        "duration": 305053760406,
+        "lr": 0.05796531943044045,
+        "metric_acc": 0.4432,
+        "momentum": 0.893866945670379,
+        "transform": "bf-v1-Pad_RandomAdjustSharpnes_RandomAutocontrast",
+        "uid": "e92d619312dd7632a77b7145925216d8",
+        "train_stat": {
+            "train_loss": 2.008805964065194,
+            "test_loss": 2.022722931921482,
+            "train_accuracy": 0.4483,
+            "gradient_norm": 0.8200342439253829,
+            "samples_per_second": 656.5357639704102,
+            "best_accuracy": 0.4432,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 30.0,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 18661236.0,
+            "ram_usage_percent": 57.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 12653103.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17793.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.237,
+        "batch": 2,
+        "duration": 393771098388,
+        "lr": 1.6451427743292445e-05,
+        "momentum": 0.8928936494390081,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomAutocontrast",
+        "uid": "464f6b6a41292084a89baceb7500aab1"
+    }
+]

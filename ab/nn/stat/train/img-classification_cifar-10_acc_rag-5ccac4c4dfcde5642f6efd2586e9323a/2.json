@@ -9,6 +9,49 @@
         "uid": "842c73b9e4529f286b2764d3d9f9668d"
     },
     {
+        "accuracy": 0.354,
+        "batch": 4,
+        "duration": 89088866295,
+        "lr": 6.501317199181189e-05,
+        "metric_acc": 0.354,
+        "momentum": 0.9950222786080986,
+        "transform": "bf-v1-RandomCrop_RandomRotation",
+        "uid": "32d49ab0c80a29242e92ffdd128de69a",
+        "train_stat": {
+            "train_loss": 1.7809495396852493,
+            "test_loss": 1.7782246369838715,
+            "train_accuracy": 0.3495,
+            "gradient_norm": 0.9999998078888822,
+            "samples_per_second": 1127.2379041909553,
+            "best_accuracy": 0.354,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 2.5,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 12141428.0,
+            "ram_usage_percent": 37.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 20424743.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17870.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3469,
+        "batch": 4,
+        "duration": 43825275691,
+        "lr": 6.501317199181189e-05,
+        "momentum": 0.9950222786080986,
+        "transform": "bf-v1-RandomCrop_RandomRotation",
+        "uid": "290c1cf93a63a67403c61f9bad6ada7b",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
         "accuracy": 0.27,
         "batch": 16,
         "duration": 31884335459,
@@ -16,5 +59,14 @@
         "momentum": 0.13388595563868022,
         "transform": "bf-v1-CenterCrop_Pad_RandomHorizontalFlip",
         "uid": "a910088cbd0086788113a8e3191ba0c5"
+    },
+    {
+        "accuracy": 0.2499,
+        "batch": 16,
+        "duration": 31804165742,
+        "lr": 0.0005708155979255064,
+        "momentum": 0.28735026321338486,
+        "transform": "bf-v1-Pad_38",
+        "uid": "7bacf8dccf470f238082bb9178116416"
     }
 ]

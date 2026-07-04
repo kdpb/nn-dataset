@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.5887,
+        "batch": 256,
+        "duration": 21439566740,
+        "lr": 0.14090275991247564,
+        "momentum": 0.8277754224985496,
+        "transform": "norm_64",
+        "uid": "1ddc7306e423ee4dee300898e14c0ca4",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.5737,
+        "batch": 256,
+        "duration": 58108422158,
+        "lr": 0.14090275991247564,
+        "metric_acc": 0.5737,
+        "momentum": 0.8277754224985496,
+        "transform": "norm_64",
+        "uid": "1ad0565496c1b6350db3ec182c00c897",
+        "train_stat": {
+            "train_loss": 1.1578842447120317,
+            "test_loss": 1.1782116740942001,
+            "train_accuracy": 0.58306,
+            "gradient_norm": 0.9999994849872677,
+            "samples_per_second": 2581.2865435165604,
+            "best_accuracy": 0.5737,
+            "best_epoch": 3,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 9.2,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 18224824.0,
+            "ram_usage_percent": 55.9,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 14017240.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 18213.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.5322,
+        "batch": 256,
+        "duration": 31807430456,
+        "lr": 0.14090275991247564,
+        "momentum": 0.8277754224985496,
+        "transform": "norm_64",
+        "uid": "07d22813e854bdf3fbe0cdc681c7d625"
+    },
+    {
+        "accuracy": 0.3695,
+        "batch": 32,
+        "duration": 40323363625,
+        "lr": 0.0001236206931941287,
+        "momentum": 0.937663855214367,
+        "transform": "bf-v1-Pad_RandomPosterize_CenterCrop",
+        "uid": "643caad5d1aa544ff5618144fa5e3dbe"
+    },
+    {
+        "accuracy": 0.2798,
+        "batch": 16,
+        "duration": 45018684351,
+        "lr": 9.632194292124349e-05,
+        "momentum": 0.7022585144746993,
+        "transform": "bf-v1-RandomPosterize_58",
+        "uid": "d0e69bf843f570ffc733030e701a8d04"
+    }
+]

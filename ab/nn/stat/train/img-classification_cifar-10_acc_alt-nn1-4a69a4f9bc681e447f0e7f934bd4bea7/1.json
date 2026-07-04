@@ -1,5 +1,57 @@
 [
     {
+        "accuracy": 0.5276,
+        "batch": 2,
+        "dropout": 0.33039729012782243,
+        "duration": 83777972589,
+        "lr": 0.008889839024501243,
+        "momentum": 0.3275092234748972,
+        "transform": "bf-v1-RandomHorizontalFlip_5",
+        "uid": "f1cd5461f909e9fc2f053ef796227d33"
+    },
+    {
+        "accuracy": 0.4896,
+        "batch": 16,
+        "dropout": 0.12970632604333776,
+        "duration": 28833684994,
+        "lr": 0.05440351289862831,
+        "momentum": 0.24569798098920226,
+        "transform": "bf-v1-RandomAdjustSharpnes_GaussianBlur_5",
+        "uid": "dc4cc2f12cd917dbf7e2d18422481f91"
+    },
+    {
+        "accuracy": 0.3556,
+        "batch": 2,
+        "dropout": 0.12276854566795126,
+        "duration": 144216135326,
+        "lr": 0.0006638814102760451,
+        "metric_acc": 0.3556,
+        "momentum": 0.7966039584537463,
+        "transform": "bf-v1-RandomPosterize_RandomAutocontrast",
+        "uid": "8b4665b432117e57d7a1d3db9dfc9b5c",
+        "train_stat": {
+            "train_loss": 1.6913513007065655,
+            "test_loss": 1.6965718413203954,
+            "train_accuracy": 0.36044,
+            "gradient_norm": 3.000000058217297,
+            "samples_per_second": 346.70289785357795,
+            "best_accuracy": 0.3556,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "cpu_count": 32,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.0,
+            "total_ram_kb": 131727416.0,
+            "occupied_ram_kb": 4559144.0,
+            "ram_usage_percent": 9.5,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 69437.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 65299.0,
+            "gpu_memory_usage_percent": 0.26
+        }
+    },
+    {
         "accuracy": 0.1897,
         "batch": 512,
         "dropout": 0.2546082869602803,
@@ -9,5 +61,15 @@
         "momentum": 0.8253099675860908,
         "transform": "norm_256_flip",
         "uid": "2809bef8168bdf5f4b30118a6c34d641"
+    },
+    {
+        "accuracy": 0.1838,
+        "batch": 512,
+        "dropout": 0.07860403921884712,
+        "duration": 15473973238,
+        "lr": 0.09628623685564436,
+        "momentum": 0.9197638875948915,
+        "transform": "bf-v1-RandomGrayscale_Pad_5",
+        "uid": "ff1798ce4e5f48ce9be1da40d5681440"
     }
 ]

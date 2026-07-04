@@ -40,6 +40,48 @@
         "uid": "693822deae0e8a3340e7255754d772f4"
     },
     {
+        "accuracy": 0.18853503184713377,
+        "batch": 4,
+        "dropout": 0.45077271948288894,
+        "duration": 71883552575,
+        "lr": 0.006563502499876855,
+        "momentum": 0.2469017349998922,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomEqualize_RandomPosterize",
+        "uid": "cfa9b362999333c4effeab9cd5521495"
+    },
+    {
+        "accuracy": 0.14547770700636942,
+        "batch": 64,
+        "dropout": 0.1319664743690988,
+        "duration": 96080144701,
+        "lr": 0.009945835405610467,
+        "metric_acc": 0.14547770700636942,
+        "momentum": 0.9542626125950292,
+        "transform": "bf-v1-RandomHorizontalFlip_CenterCrop_5",
+        "uid": "0e4140833239dc2fdc261da0376959ca",
+        "train_stat": {
+            "train_loss": 2.2681939891866736,
+            "test_loss": 2.274131278837881,
+            "train_accuracy": 0.14890695955222305,
+            "gradient_norm": 0.5560325472336444,
+            "samples_per_second": 98.55357510360831,
+            "best_accuracy": 0.14547770700636942,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "cpu_count": 32,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 6.6,
+            "total_ram_kb": 131724388.0,
+            "occupied_ram_kb": 11635324.0,
+            "ram_usage_percent": 12.1,
+            "gpu_type": "NVIDIA GeForce RTX 3090",
+            "gpu_memory_kb": 411250.0,
+            "gpu_total_memory_kb": 24703168.0,
+            "occupied_gpu_memory_kb": 364023.5,
+            "gpu_memory_usage_percent": 1.47
+        }
+    },
+    {
         "accuracy": 0.12917197452229298,
         "batch": 256,
         "dropout": 0.27522637685684825,

@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.4738,
+        "batch": 2048,
+        "duration": 63716995684,
+        "lr": 0.697721616288617,
+        "momentum": 0.43158332589369786,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomCrop_4",
+        "uid": "79bf242f40b4d41c3338254d94c15752"
+    },
+    {
+        "accuracy": 0.4011,
+        "batch": 2048,
+        "duration": 62285958942,
+        "lr": 0.09147914106317555,
+        "momentum": 0.5084384046148618,
+        "transform": "bf-v1-CenterCrop_RandomAdjustSharpnes_4",
+        "uid": "9e9a86b91c4b3431cdf6bfeda2d6eaf2"
+    },
+    {
+        "accuracy": 0.384,
+        "batch": 2048,
+        "duration": 42310391601,
+        "lr": 0.697721616288617,
+        "momentum": 0.43158332589369786,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomCrop_4",
+        "uid": "197a9354721f7bc796f752d64f5d1457",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3679,
+        "batch": 64,
+        "duration": 70612690687,
+        "lr": 0.001703345487355114,
+        "momentum": 0.342256574671264,
+        "transform": "bf-v1-Pad_RandomCrop_5",
+        "uid": "1c5555c26979573cd69369c0f0765b27"
+    },
+    {
+        "accuracy": 0.3174,
+        "batch": 2048,
+        "duration": 113932722894,
+        "lr": 0.697721616288617,
+        "metric_acc": 0.3174,
+        "momentum": 0.43158332589369786,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomCrop_4",
+        "uid": "c02e5a80d5016acea636ae67d08165e9",
+        "train_stat": {
+            "train_loss": 1.9749082803726197,
+            "test_loss": 1.9651350021362304,
+            "train_accuracy": 0.31402,
+            "gradient_norm": 1.2787867117039344,
+            "samples_per_second": 2201.148772923533,
+            "best_accuracy": 0.3741,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 25.4,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 20547276.0,
+            "ram_usage_percent": 63.0,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 21143703.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 18118.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    }
+]

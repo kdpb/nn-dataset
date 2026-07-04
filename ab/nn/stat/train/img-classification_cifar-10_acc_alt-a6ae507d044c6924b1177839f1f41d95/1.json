@@ -9,5 +9,49 @@
         "momentum": 0.19906912477626726,
         "transform": "norm_128_flip",
         "uid": "7ae9e964af2de025554c63fca95d8761"
+    },
+    {
+        "accuracy": 0.2744,
+        "batch": 32,
+        "dropout": 0.32757625364754556,
+        "duration": 72035418468,
+        "lr": 0.004565347898745531,
+        "lr_now": 0.004565347898745531,
+        "momentum": 0.576968326088037,
+        "transform": "bf-v1-RandomPerspective_RandomAdjustSharpnes_6",
+        "uid": "eb98015b1f036af57aa6f379de585010",
+        "train_stat": {
+            "train_loss": 1.8935230894875847,
+            "test_loss": 1.8874466845783562,
+            "train_accuracy": 0.27312,
+            "gradient_norm": 2.999999555509711,
+            "samples_per_second": 694.1054205190665,
+            "best_accuracy": 0.2744,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "gpu_memory_kb": 2862877.0
+        }
+    },
+    {
+        "accuracy": 0.1428,
+        "batch": 16,
+        "dropout": 0.19646262468457287,
+        "duration": 75259195425,
+        "lr": 0.0012589986732119284,
+        "lr_now": 0.0012589986732119284,
+        "momentum": 0.3839319921151628,
+        "transform": "bf-v1-RandomRotation_CenterCrop_6",
+        "uid": "b8bae83541ccb25153dda34b97e0557b",
+        "train_stat": {
+            "train_loss": 2.299140588531494,
+            "test_loss": 2.2991472564697264,
+            "train_accuracy": 0.14668,
+            "gradient_norm": 0.42745341150160693,
+            "samples_per_second": 664.3738462100276,
+            "best_accuracy": 0.1428,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "gpu_memory_kb": 1160937.0
+        }
     }
 ]

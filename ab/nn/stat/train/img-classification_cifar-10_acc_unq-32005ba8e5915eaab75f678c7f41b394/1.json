@@ -1,0 +1,66 @@
+[
+    {
+        "accuracy": 0.4814,
+        "batch": 64,
+        "dropout": 0.2,
+        "duration": 59951589840,
+        "epoch": 1,
+        "lr": 0.01,
+        "momentum": 0.9,
+        "transform": "norm_256_flip",
+        "uid": "268985784c034788d34ad31d0305cb7f"
+    },
+    {
+        "accuracy": 0.2891,
+        "batch": 16,
+        "duration": 8281884735,
+        "lr": 0.3100659822302416,
+        "lr_now": 0.3100659822302416,
+        "metric_acc": 0.2891,
+        "momentum": 0.8054271648238572,
+        "transform": "echo",
+        "uid": "3e2979d1074f347bed8f6ec48d910bc1",
+        "train_stat": {
+            "train_loss": 1.9077955148315429,
+            "test_loss": 1.9058341455459595,
+            "train_accuracy": 0.288,
+            "gradient_norm": 0.5848435916325554,
+            "samples_per_second": 6037.3310881545485,
+            "best_accuracy": 0.2891,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.4,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 9847464.0,
+            "ram_usage_percent": 30.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 5195270.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17682.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.2771,
+        "batch": 16,
+        "duration": 18303873857,
+        "lr": 0.3100659822302416,
+        "lr_now": 0.3100659822302416,
+        "momentum": 0.8054271648238572,
+        "transform": "echo",
+        "uid": "9b301d6cd24f49f89ec7d82e79551522",
+        "train_stat": {
+            "train_loss": 1.9519781215286256,
+            "test_loss": 1.9485956996917724,
+            "train_accuracy": 0.27686,
+            "gradient_norm": 0.5029873737270534,
+            "samples_per_second": 2731.685056179884,
+            "best_accuracy": 0.2771,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "gpu_memory_kb": 827687.0
+        }
+    }
+]

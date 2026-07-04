@@ -1,0 +1,75 @@
+[
+    {
+        "accuracy": 0.8327,
+        "batch": 16,
+        "duration": 411485064090,
+        "lr": 0.16814709528297317,
+        "lr_now": 0.16814709528297317,
+        "momentum": 0.13003049299377956,
+        "transform": "bf-v1-RandomRotation_CenterCrop_6",
+        "uid": "0a457f5702ef84669ff78fd7c97052f8",
+        "train_stat": {
+            "train_loss": 0.09770425419472158,
+            "test_loss": 0.5736528419472278,
+            "train_accuracy": 0.9651,
+            "gradient_norm": 2.9696343226271362,
+            "samples_per_second": 978.8114882008884,
+            "best_accuracy": 0.8329,
+            "best_epoch": 6,
+            "epoch_max": 50,
+            "gpu_memory_kb": 423928.0
+        }
+    },
+    {
+        "accuracy": 0.8306,
+        "batch": 16,
+        "duration": 414554593979,
+        "lr": 0.16814709528297317,
+        "lr_now": 0.16814709528297317,
+        "momentum": 0.13003049299377956,
+        "transform": "bf-v1-RandomRotation_CenterCrop_6",
+        "uid": "6dd0883c5cf65c7172fb250d81fb5239",
+        "train_stat": {
+            "train_loss": 0.07210779866714961,
+            "test_loss": 0.5789350736781955,
+            "train_accuracy": 0.97586,
+            "gradient_norm": 2.9999992438171286,
+            "samples_per_second": 968.4139261106022,
+            "best_accuracy": 0.8306,
+            "best_epoch": 8,
+            "epoch_max": 50,
+            "gpu_memory_kb": 587322.0
+        }
+    },
+    {
+        "accuracy": 0.8281,
+        "batch": 16,
+        "duration": 397378620707,
+        "lr": 0.16814709528297317,
+        "lr_now": 0.16814709528297317,
+        "momentum": 0.13003049299377956,
+        "transform": "bf-v1-RandomRotation_CenterCrop_6",
+        "uid": "8bb8b3c865279b3688122e8b85fb1349",
+        "train_stat": {
+            "train_loss": 0.09296153696031309,
+            "test_loss": 0.6366306388236582,
+            "train_accuracy": 0.9684,
+            "gradient_norm": 2.999999138328125,
+            "samples_per_second": 1011.4397040227733,
+            "best_accuracy": 0.8281,
+            "best_epoch": 8,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 13.6,
+            "total_ram_kb": 32620620.0,
+            "occupied_ram_kb": 13159100.0,
+            "ram_usage_percent": 40.3,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 1602393.5,
+            "gpu_total_memory_kb": 24696896.0,
+            "occupied_gpu_memory_kb": 274844.5,
+            "gpu_memory_usage_percent": 1.11
+        }
+    }
+]

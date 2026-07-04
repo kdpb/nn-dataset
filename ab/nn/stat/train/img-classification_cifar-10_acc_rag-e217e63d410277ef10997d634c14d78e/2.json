@@ -1,5 +1,48 @@
 [
     {
+        "accuracy": 0.498,
+        "batch": 2,
+        "duration": 215777532824,
+        "lr": 0.06305401245025277,
+        "metric_acc": 0.498,
+        "momentum": 0.6822072199360367,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomSolarize_2",
+        "uid": "28099b1713d65ceae3e53e7e0dfd3234",
+        "train_stat": {
+            "train_loss": 1.5489083731052011,
+            "test_loss": 1.5660906717743726,
+            "train_accuracy": 0.49808,
+            "gradient_norm": 0.999999821711916,
+            "samples_per_second": 466.0358741403073,
+            "best_accuracy": 0.498,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 18.3,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 15402204.0,
+            "ram_usage_percent": 47.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 12415353.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17982.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.4819,
+        "batch": 2,
+        "duration": 109805909108,
+        "lr": 0.06305401245025277,
+        "momentum": 0.6822072199360367,
+        "transform": "bf-v1-RandomAdjustSharpnes_RandomSolarize_2",
+        "uid": "5868f14755ffcd27d1de1bac272adcd4",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
         "accuracy": 0.4591,
         "batch": 2,
         "duration": 170739005456,
@@ -16,5 +59,14 @@
         "momentum": 0.6355527689402485,
         "transform": "norm_299_flip",
         "uid": "1b837d7b0cee04e0f38807a19331412b"
+    },
+    {
+        "accuracy": 0.1594,
+        "batch": 2048,
+        "duration": 26506392754,
+        "lr": 0.00951196179327962,
+        "momentum": 0.37668531314931153,
+        "transform": "bf-v1-RandomCrop_RandomHorizontalFlip_5",
+        "uid": "2159eca9155e45280910809eb4c034d9"
     }
 ]

@@ -1,0 +1,63 @@
+[
+    {
+        "accuracy": 0.4119,
+        "batch": 8,
+        "duration": 148595313953,
+        "lr": 0.2232439731462514,
+        "metric_acc": 0.4119,
+        "momentum": 0.21400549332091467,
+        "transform": "bf-v1-RandomCrop_RandomRotation_RandomAutocontrast",
+        "uid": "cf4248ada2521f63a335193a440226dd",
+        "train_stat": {
+            "train_loss": 1.602800068511963,
+            "test_loss": 1.604055225610733,
+            "train_accuracy": 0.41346,
+            "gradient_norm": 1.4099386907064884,
+            "samples_per_second": 1002.9404709394886,
+            "best_accuracy": 0.4119,
+            "best_epoch": 3,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 7.5,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 20374048.0,
+            "ram_usage_percent": 62.4,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 21143703.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17730.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.377,
+        "batch": 8,
+        "duration": 66806023740,
+        "lr": 0.2232439731462514,
+        "momentum": 0.21400549332091467,
+        "transform": "bf-v1-RandomCrop_RandomRotation_RandomAutocontrast",
+        "uid": "a63d975b789134c08a0d27e54d368154",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.2772,
+        "batch": 8,
+        "duration": 83457761012,
+        "lr": 0.2232439731462514,
+        "momentum": 0.21400549332091467,
+        "transform": "bf-v1-RandomCrop_RandomRotation_RandomAutocontrast",
+        "uid": "6e53726aa281d89636e4b5af50c5a5f4"
+    },
+    {
+        "accuracy": 0.2478,
+        "batch": 16,
+        "duration": 54276885823,
+        "lr": 1.0604299198137075e-05,
+        "momentum": 0.965835929125871,
+        "transform": "bf-v1-Pad_RandomGrayscale",
+        "uid": "49621e847aa45e9ecab546ab72de7a4b"
+    }
+]

@@ -2,12 +2,17 @@ import sqlite3
 from os import makedirs
 from pathlib import Path
 
-from ab.nn.util.Const import param_tables, db_file, db_dir, main_tables, code_tables, dependent_tables, all_tables, index_colum, run_table
+from ab.nn.util.Const import param_tables, db_file, db_dir, main_tables, code_tables, dependent_tables, all_tables, index_colum, run_table, nn_stat_table, tflite_table, prun_table, train_stat_table
+from ab.nn.util.db.build_nn_similarity import jaccard_blobs
+
+SQLITE_BUSY_TIMEOUT_MS = 300_000
 
 
 def sql_conn():
-    conn = sqlite3.connect(db_file)
+    conn = sqlite3.connect(db_file, timeout=SQLITE_BUSY_TIMEOUT_MS / 1000)
+    conn.execute(f"PRAGMA busy_timeout = {SQLITE_BUSY_TIMEOUT_MS}")
     conn.row_factory = sqlite3.Row  # Enable row access
+    conn.create_function("jaccard_blobs", 2, jaccard_blobs) #Register Scalar UDF onto connection
     return conn, conn.cursor()
 
 
@@ -71,6 +76,48 @@ def init_db():
     for nm in index_colum:
         cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{nm} ON stat ({nm})")
 
+    # Create training statistics table
+    # Stores per-epoch training diagnostics linked to the main stat table.
+    cursor.execute(f"""
+    CREATE TABLE IF NOT EXISTS {train_stat_table} (
+        stat_id TEXT PRIMARY KEY,
+
+        train_loss REAL,
+        test_loss REAL,
+        train_accuracy REAL,
+        gradient_norm REAL,
+        samples_per_second REAL,
+        epoch_max INTEGER,
+
+        cpu_count INTEGER,
+        cpu_type TEXT,
+        cpu_usage_percent REAL,
+
+        total_ram_kb REAL,
+        occupied_ram_kb REAL,
+        ram_usage_percent REAL,
+
+        gpu_type TEXT,
+        gpu_memory_kb REAL,
+        gpu_total_memory_kb REAL,
+        occupied_gpu_memory_kb REAL,
+        gpu_memory_usage_percent REAL,
+
+        FOREIGN KEY (stat_id) REFERENCES stat(id) ON DELETE CASCADE
+    )
+    """)
+
+    # Add indexes for training statistics
+    cursor.execute(
+        f"CREATE INDEX IF NOT EXISTS idx_{train_stat_table}_gradient_norm "
+        f"ON {train_stat_table} (gradient_norm);"
+    )
+
+    cursor.execute(
+        f"CREATE INDEX IF NOT EXISTS idx_{train_stat_table}_samples_per_second "
+        f"ON {train_stat_table} (samples_per_second);"
+    )
+
     # Create mobile analytics table (runtime stats)
     cursor.execute(f"""
     CREATE TABLE IF NOT EXISTS {run_table} (
@@ -82,13 +129,188 @@ def init_db():
         emulator BOOLEAN,
         error_message TEXT,
         duration INTEGER,
+        
+        iterations INTEGER,
+        unit TEXT,
+        
+        cpu_duration INTEGER,
+        cpu_min_duration INTEGER,
+        cpu_max_duration INTEGER,
+        cpu_std_dev REAL,
+        cpu_error TEXT,
+        
+        gpu_duration INTEGER,
+        gpu_min_duration INTEGER,
+        gpu_max_duration INTEGER,
+        gpu_std_dev REAL,
+        gpu_error TEXT,
+        
+        npu_duration INTEGER,
+        npu_min_duration INTEGER,
+        npu_max_duration INTEGER,
+        npu_std_dev REAL,
+        npu_error TEXT,
+        
+        total_ram_kb INTEGER,
+        free_ram_kb INTEGER,
+        available_ram_kb INTEGER,
+        cached_kb INTEGER,
+        
+        in_dim_0 INTEGER,
+        in_dim_1 INTEGER,
+        in_dim_2 INTEGER,
+        in_dim_3 INTEGER,
+        
         device_analytics_json TEXT,
+        precision_type TEXT,
         FOREIGN KEY (model_name) REFERENCES nn (name) ON DELETE CASCADE
     )
     """)
     # Indexes for mobile analytics
     cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{run_table}_model ON {run_table} (model_name);")
     cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{run_table}_device ON {run_table} (device_type);")
+
+    # Create TFLite model metadata table
+    cursor.execute(f"""
+    CREATE TABLE IF NOT EXISTS tflite (
+        id TEXT PRIMARY KEY,
+        model_name TEXT NOT NULL,
+        accuracy REAL,
+        transform TEXT,
+        precision_type TEXT,
+        FOREIGN KEY (model_name) REFERENCES nn (name) ON DELETE CASCADE
+    )
+    """)
+    # Indexes for tflite table
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_tflite_model ON tflite (model_name);")
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_tflite_precision ON tflite (precision_type);")
+
+    # Create Pruning analytics table
+    cursor.execute(f"""
+    CREATE TABLE IF NOT EXISTS {prun_table} (
+        id TEXT PRIMARY KEY,
+        model_name TEXT NOT NULL,
+        pruning_method TEXT NOT NULL,
+        task_dataset TEXT NOT NULL,
+        status TEXT,
+        accuracy REAL,
+        duration INTEGER,
+        pruning_ratio REAL,
+        params_before INTEGER,
+        params_after INTEGER,
+        params_removed INTEGER,
+        model_size_before_kb REAL,
+        model_size_after_kb REAL,
+        FOREIGN KEY (model_name) REFERENCES nn (name) ON DELETE CASCADE
+    )
+    """)
+    # Indexes for prun table
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{prun_table}_model ON {prun_table} (model_name);")
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{prun_table}_method ON {prun_table} (pruning_method);")
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{prun_table}_config ON {prun_table} (pruning_method, task_dataset);")
+
+    # Create NN statistics table
+    cursor.execute(f"""
+    CREATE TABLE IF NOT EXISTS {nn_stat_table} (
+        id TEXT PRIMARY KEY,
+        nn_name TEXT NOT NULL,
+        prm_id TEXT NOT NULL,
+        total_layers INTEGER,
+        leaf_layers INTEGER,
+        max_depth INTEGER,
+        total_params INTEGER,
+        trainable_params INTEGER,
+        frozen_params INTEGER,
+        flops INTEGER,
+        model_size_mb REAL,
+        buffer_size_mb REAL,
+        total_memory_mb REAL,
+        dropout_count INTEGER,
+        has_attention INTEGER,
+        has_residual_connections INTEGER,
+        is_resnet_like INTEGER,
+        is_vgg_like INTEGER,
+        is_inception_like INTEGER,
+        is_densenet_like INTEGER,
+        is_unet_like INTEGER,
+        is_transformer_like INTEGER,
+        is_mobilenet_like INTEGER,
+        is_efficientnet_like INTEGER,
+        code_length INTEGER,
+        num_classes_defined INTEGER,
+        num_functions_defined INTEGER,
+        uses_sequential INTEGER,
+        uses_modulelist INTEGER,
+        uses_moduledict INTEGER,
+        meta_json TEXT,
+        error TEXT,
+        FOREIGN KEY (nn_name) REFERENCES nn (name) ON DELETE CASCADE
+    )
+    """)
+
+    # Indexes for NN statistics
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{nn_stat_table}_nn ON {nn_stat_table} (nn_name);")
+    cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{nn_stat_table}_prm ON {nn_stat_table} (prm_id);")
+
+    # Create NN code MinHash signatures table (DB-first diversity)
+    cursor.execute(f"""
+    CREATE TABLE IF NOT EXISTS nn_minhash (
+        nn TEXT PRIMARY KEY,
+        num_perm INTEGER NOT NULL,
+        shingle_n INTEGER NOT NULL,
+        hashvalues BLOB NOT NULL,
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+
+    )
+    """)
+
+
+# NN Similarity Table
+    cursor.execute(f"""
+    CREATE TABLE IF NOT EXISTS nn_similarity (
+      nn_a TEXT NOT NULL,
+      nn_b TEXT NOT NULL,
+      jaccard REAL NOT NULL,
+      method TEXT NOT NULL DEFAULT 'minhash',
+      created_at TEXT NOT NULL DEFAULT (datetime('now')),
+      PRIMARY KEY (nn_a, nn_b)
+    )
+    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_nn_minhash_nn ON nn_minhash(nn);")
+
+    #cursor.execute("CREATE INDEX IF NOT EXISTS idx_nn_similarity_a_j ON nn_similarity(nn_a, jaccard);")
+    #cursor.execute("CREATE INDEX IF NOT EXISTS idx_nn_similarity_b ON nn_similarity(nn_b);")
+
+    # layer_stat — one row per (run, layer)
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS layer_stat (
+                id          TEXT PRIMARY KEY,
+                layer_name  TEXT,
+                layer_type  TEXT,
+                stat_id     TEXT
+            )
+        """)
+
+    # per_layer_stat — one row per (layer, epoch)
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS per_layer_stat (
+                id          TEXT,
+                stat_id     TEXT,
+                layer_type  TEXT,
+                ww_alpha    REAL,
+                grad_norm   REAL,
+                dead_frac   REAL,
+                taylor_imp  REAL,
+                cka_redund  REAL,
+                eff_rank    REAL,
+                rank_ratio  REAL,
+                sensitivity REAL,
+                PRIMARY KEY (id, stat_id)
+            )
+        """)
+
+
+
     close_conn(conn)
     print(f"Database initialized at {db_file}")
 
@@ -105,4 +327,6 @@ def reset_db():
     for nm in all_tables:
         cursor.execute(f"DROP TABLE IF EXISTS {nm}")
     close_conn(conn)
+    init_db()
+if __name__ == "__main__":
     init_db()

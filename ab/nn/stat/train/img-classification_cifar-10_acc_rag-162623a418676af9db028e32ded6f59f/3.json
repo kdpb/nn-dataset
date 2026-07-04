@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.5083,
+        "batch": 4,
+        "duration": 129157733276,
+        "lr": 0.11791883576922609,
+        "metric_acc": 0.5083,
+        "momentum": 0.2745101994701905,
+        "transform": "bf-v1-RandomCrop_82",
+        "uid": "059b5bddfaa774b056dc10ca726ce564",
+        "train_stat": {
+            "train_loss": 1.3470616469705106,
+            "test_loss": 1.35790635471344,
+            "train_accuracy": 0.51742,
+            "gradient_norm": 0.9999996985358655,
+            "samples_per_second": 1161.60797307313,
+            "best_accuracy": 0.5083,
+            "best_epoch": 3,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 26.6,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 18470680.0,
+            "ram_usage_percent": 56.6,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 12653103.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17913.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.5014,
+        "batch": 4,
+        "duration": 59802017124,
+        "lr": 0.11791883576922609,
+        "momentum": 0.2745101994701905,
+        "transform": "bf-v1-RandomCrop_82",
+        "uid": "464802b84c979e1aaac9417387b05368",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.4714,
+        "batch": 4,
+        "duration": 99081802235,
+        "lr": 0.11791883576922609,
+        "momentum": 0.2745101994701905,
+        "transform": "bf-v1-RandomCrop_82",
+        "uid": "824d6b5fa005db7b49b997d0ea9f9ba9"
+    },
+    {
+        "accuracy": 0.3735,
+        "batch": 256,
+        "duration": 41368556542,
+        "lr": 0.023714827206240695,
+        "momentum": 0.8937500010872865,
+        "transform": "bf-v1-CenterCrop_RandomRotation_RandomAdjustSharpnes",
+        "uid": "dc3ae89fb82f932a5e62a903adfbea1c"
+    },
+    {
+        "accuracy": 0.3356,
+        "batch": 128,
+        "duration": 45419145723,
+        "lr": 0.009788776233809108,
+        "momentum": 0.1553703814786891,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomPosterize_RandomPerspective",
+        "uid": "c61260fc8012497f624db822fcc70bcf"
+    }
+]

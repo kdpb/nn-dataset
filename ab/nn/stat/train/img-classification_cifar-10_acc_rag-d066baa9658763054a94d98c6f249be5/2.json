@@ -1,5 +1,75 @@
 [
     {
+        "accuracy": 0.4187,
+        "batch": 128,
+        "duration": 23582965888,
+        "lr": 0.9255652756313761,
+        "momentum": 0.6664854908920389,
+        "transform": "bf-v1-RandomAdjustSharpnes_CenterCrop",
+        "uid": "1f855052a76cb87c363361e7885cc4c4"
+    },
+    {
+        "accuracy": 0.4109,
+        "batch": 128,
+        "duration": 16754660066,
+        "lr": 0.9255652756313761,
+        "momentum": 0.6664854908920389,
+        "transform": "bf-v1-RandomAdjustSharpnes_CenterCrop",
+        "uid": "5555e942b070ab8fb440f6b5dd552747",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3793,
+        "batch": 128,
+        "duration": 44540192116,
+        "lr": 0.9255652756313761,
+        "metric_acc": 0.3793,
+        "momentum": 0.6664854908920389,
+        "transform": "bf-v1-RandomAdjustSharpnes_CenterCrop",
+        "uid": "bc3d8b55031194e7e0fa77d9c8ec2c7e",
+        "train_stat": {
+            "train_loss": 1.7609321866803767,
+            "test_loss": 1.7523298429537424,
+            "train_accuracy": 0.38386,
+            "gradient_norm": 0.6383609216775717,
+            "samples_per_second": 2232.648256844841,
+            "best_accuracy": 0.3793,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 28.6,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 16607004.0,
+            "ram_usage_percent": 50.9,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 2821060.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17914.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3558,
+        "batch": 1024,
+        "duration": 23021233629,
+        "lr": 0.6204873762381926,
+        "momentum": 0.3924000291282408,
+        "transform": "bf-v1-RandomEqualize_2",
+        "uid": "594bb274e83b59713158b299cf497234"
+    },
+    {
+        "accuracy": 0.2047,
+        "batch": 512,
+        "duration": 26253010845,
+        "lr": 0.008744679390895538,
+        "momentum": 0.030489376999007,
+        "transform": "bf-v1-CenterCrop_RandomAdjustSharpnes_RandomGrayscale",
+        "uid": "09d02d73821c66451e60935be4c848df"
+    },
+    {
         "accuracy": 0.1643,
         "batch": 2048,
         "duration": 25159964963,

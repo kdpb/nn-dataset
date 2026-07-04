@@ -1,5 +1,36 @@
 [
     {
+        "accuracy": 0.2473,
+        "batch": 128,
+        "duration": 11223843925,
+        "lr": 0.03956401696975183,
+        "metric_acc": 0.2473,
+        "momentum": 0.9328140273018548,
+        "transform": "norm_32",
+        "uid": "bf92ff233d6e87893c2cf97943fb6dd4",
+        "train_stat": {
+            "train_loss": 2.060460171431227,
+            "test_loss": 2.0540073491350004,
+            "train_accuracy": 0.23592,
+            "gradient_norm": 0.4807169573658376,
+            "samples_per_second": 4454.86367601991,
+            "best_accuracy": 0.2473,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.4,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10826132.0,
+            "ram_usage_percent": 33.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 10706627.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17685.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.2072,
         "batch": 128,
         "duration": 6313493369,
@@ -16,6 +47,15 @@
         "momentum": 0.5962763960115788,
         "transform": "bf-v1-Pad_RandomGrayscale",
         "uid": "d4a49a19876348508cbbc64253abe61a"
+    },
+    {
+        "accuracy": 0.1767,
+        "batch": 8,
+        "duration": 12859528322,
+        "lr": 0.9984113561330873,
+        "momentum": 0.24066568472789007,
+        "transform": "norm",
+        "uid": "3ec5b71ce28a90fcb1aa2845c9785b85"
     },
     {
         "accuracy": 0.1704,
@@ -45,5 +85,14 @@
         "momentum": 0.07751415559969321,
         "transform": "bf-v1-RandomGrayscale_RandomHorizontalFlip_4",
         "uid": "9f75b87a5107cdd016a086ef93e6a1f3"
+    },
+    {
+        "accuracy": 0.1255,
+        "batch": 8,
+        "duration": 22956654574,
+        "lr": 0.0004369985788988295,
+        "momentum": 0.13471365333702168,
+        "transform": "norm_128",
+        "uid": "ffc077984fff5bb3de6c0cfe7a83719f"
     }
 ]

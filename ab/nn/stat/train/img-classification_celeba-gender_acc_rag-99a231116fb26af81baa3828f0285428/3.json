@@ -1,5 +1,26 @@
 [
     {
+        "accuracy": 0.7972147079450956,
+        "batch": 1024,
+        "duration": 763535961131,
+        "lr": 0.19170589137268243,
+        "lr_now": 0.19170589137268243,
+        "momentum": 0.3132588216274167,
+        "transform": "echo_32",
+        "uid": "f4d0256fa4eae2466584beba4e83fa70",
+        "train_stat": {
+            "train_loss": 0.4472010609863689,
+            "test_loss": 0.452238729596138,
+            "train_accuracy": 0.7997296799164465,
+            "gradient_norm": 0.9181579964891248,
+            "samples_per_second": 639.2745344807415,
+            "best_accuracy": 0.7972147079450956,
+            "best_epoch": 3,
+            "epoch_max": 5,
+            "gpu_memory_kb": 1616186.0
+        }
+    },
+    {
         "accuracy": 0.6361587015329125,
         "batch": 256,
         "duration": 286557209295,
@@ -7,5 +28,47 @@
         "momentum": 0.774179132259153,
         "transform": "norm_32",
         "uid": "6ed569e319987d64d60cf5fdfcf1f039"
+    },
+    {
+        "accuracy": 0.6145676785893197,
+        "batch": 4,
+        "duration": 985971428282,
+        "lr": 8.365894440321468e-05,
+        "lr_now": 8.365894440321468e-05,
+        "momentum": 0.06747478553433506,
+        "transform": "bf-v1-RandomCrop_RandomRotation",
+        "uid": "9d1f4affd299aabd3b3d2781aeb6b588",
+        "train_stat": {
+            "train_loss": 0.6708384633549099,
+            "test_loss": 0.6635935958784631,
+            "train_accuracy": 0.5884008109602507,
+            "gradient_norm": 1.903370298438543,
+            "samples_per_second": 494.77301611698374,
+            "best_accuracy": 0.6169722472698126,
+            "best_epoch": 2,
+            "epoch_max": 5,
+            "gpu_memory_kb": 1616186.0
+        }
+    },
+    {
+        "accuracy": 0.6141669171425709,
+        "batch": 8,
+        "duration": 864740336177,
+        "lr": 0.10659776981352856,
+        "lr_now": 0.10659776981352856,
+        "momentum": 0.21667168313669305,
+        "transform": "bf-v1-RandomCrop_CenterCrop_5",
+        "uid": "d36a79173362763e1e907c2ddd60f2b7",
+        "train_stat": {
+            "train_loss": 0.6700285207863761,
+            "test_loss": 0.6619385856514176,
+            "train_accuracy": 0.58699391779812,
+            "gradient_norm": 0.34318105729147436,
+            "samples_per_second": 563.8058606956439,
+            "best_accuracy": 0.6154693918445046,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "gpu_memory_kb": 41957.5
+        }
     }
 ]

@@ -1,5 +1,48 @@
 [
     {
+        "accuracy": 0.3431,
+        "batch": 64,
+        "duration": 34379008120,
+        "lr": 0.04496239756903159,
+        "momentum": 0.6194968281794828,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomRotation",
+        "uid": "290402d9a6dc853fcac69b7cf201d86c",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3368,
+        "batch": 64,
+        "duration": 85454668793,
+        "lr": 0.04496239756903159,
+        "metric_acc": 0.3368,
+        "momentum": 0.6194968281794828,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomRotation",
+        "uid": "b2eda1be6fd84e2bf515df5017d4a33e",
+        "train_stat": {
+            "train_loss": 1.7593300580368627,
+            "test_loss": 1.7559307320102764,
+            "train_accuracy": 0.33896,
+            "gradient_norm": 1.7114909957288253,
+            "samples_per_second": 2348.932425717814,
+            "best_accuracy": 0.3397,
+            "best_epoch": 3,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.0,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 11963908.0,
+            "ram_usage_percent": 36.7,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 14819109.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17686.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.334,
         "batch": 64,
         "duration": 44991131023,
@@ -25,5 +68,14 @@
         "momentum": 0.916058665320444,
         "transform": "bf-v1-RandomPerspective_RandomAutocontrast_2",
         "uid": "40fd5ef0a1dc4fb444cd4c6d762b7814"
+    },
+    {
+        "accuracy": 0.2048,
+        "batch": 4,
+        "duration": 101895181869,
+        "lr": 0.00045752859535575765,
+        "momentum": 0.5569717808284573,
+        "transform": "bf-v1-RandomAdjustSharpnes_Grayscale_3",
+        "uid": "283d7d732e76bdefdf2c414ffa5061bf"
     }
 ]

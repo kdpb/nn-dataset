@@ -7,16 +7,20 @@ import inspect
 import random
 import re
 import json
+from typing import Any
+import os
+import platform
+import shutil
+import subprocess
+import importlib
+from typing import Optional
+import psutil
 
 import torch
 from os import makedirs, remove
 from os.path import exists, dirname, join
 
 from ab.nn.util.Const import *
-
-
-def nn_mod(*nms):
-    return ".".join(to_nn + nms)
 
 
 def create_file(file_dir, file_name, content=''):
@@ -44,18 +48,6 @@ def torch_device():
     return device
 
 
-def get_attr(mod, f):
-    return get_obj_attr(__import__(mod, fromlist=[f]), f)
-
-
-def get_ab_nn_attr(mod, f):
-    return get_attr(nn_mod(mod), f)
-
-
-def min_accuracy(dataset):
-    return get_ab_nn_attr(f"loader.{dataset}", 'MINIMUM_ACCURACY')
-
-
 def order_configs(configs, random_config_order):
     configs = list(configs)
     if random_config_order:
@@ -73,6 +65,7 @@ def add_categorical_if_absent(trial, prms, nm, fn, default=None):
     if not (nm in prms and prms[nm]):
         prms[nm] = trial.suggest_categorical(nm, default or fn())
     return prms[nm]
+
 
 def is_full_config(l: list[str] | tuple[str, ...]):
     return 4 == len(l) and (nn_dir / (l[-1] + '.py')).exists()
@@ -122,10 +115,14 @@ def uuid4(obj):
 
 
 def validate_prm(batch_min, batch_max, lr_min, lr_max, momentum_min, momentum_max, dropout_min, dropout_max):
-    if batch_min and batch_max and batch_min > batch_max: raise Exception(f"min_batch_binary_power {batch_min} > max_batch_binary_power {batch_max}")
-    if lr_min and lr_max and lr_min > lr_max: raise Exception(f"min_learning_rate {lr_min} > max_learning_rate {lr_max}")
-    if momentum_min and momentum_max and momentum_min > momentum_max: raise Exception(f"min_momentum {momentum_min} > max_momentum {momentum_max}")
-    if dropout_min and dropout_max and dropout_min > dropout_max: raise Exception(f"min_momentum {dropout_min} > max_momentum {dropout_max}")
+    if batch_min and batch_max and batch_min > batch_max: raise Exception(
+        f"min_batch_binary_power {batch_min} > max_batch_binary_power {batch_max}")
+    if lr_min and lr_max and lr_min > lr_max: raise Exception(
+        f"min_learning_rate {lr_min} > max_learning_rate {lr_max}")
+    if momentum_min and momentum_max and momentum_min > momentum_max: raise Exception(
+        f"min_momentum {momentum_min} > max_momentum {momentum_max}")
+    if dropout_min and dropout_max and dropout_min > dropout_max: raise Exception(
+        f"min_momentum {dropout_min} > max_momentum {dropout_max}")
 
 
 def format_time(sec):
@@ -138,28 +135,6 @@ def release_memory():
         if torch.cuda.is_available(): torch.cuda.empty_cache()
     except Exception as e:
         print(f"Exception during memory release: {e}")
-
-
-def read_py_file_as_string(file_path):
-    """
-    read_py_file_as_string。
-
-    param:
-        file_path (str): path of the file to read.
-
-    Return:
-        str: Content of the file.
-    """
-    try:
-        spec = importlib.util.spec_from_file_location("module_name", file_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-
-        source_code = inspect.getsource(module)
-        return source_code
-    except Exception as e:
-        print(f"error when reading file: {e}")
-        return None
 
 
 def str_not_none(prefix, value):
@@ -212,24 +187,103 @@ def test_loader_f(test_dataset, batch, num_workers):
                                        collate_fn=get_obj_attr(test_dataset, 'collate_fn'))
 
 
-def save_if_best(model, model_name, current_score, save_pth_weights, save_onnx_weights, train_set, num_workers, save_path=None):
+def save_if_best(model, model_name, current_score, save_pth_weights, save_onnx_weights, train_set, num_workers,
+                 save_path=None):
     """
     Called by the training framework to save weights if performance improves.
+    Also persists the achieved best_score in a sidecar JSON so subsequent
+    runs (when started with --pretrained 1) only overwrite the checkpoint
+    if they exceed it.
     """
-    checkpoint_dir = out_dir / 'checkpoints' / model_name
+    checkpoint_dir = ckpt_dir / model_name.split('.')[-1]
     makedirs(checkpoint_dir, exist_ok=True)
     # Compare the current score with the best score recorded.
     if current_score > getattr(model, "best_score", 0):
         setattr(model, 'best_score', current_score)
         best_checkpoint_path = join(checkpoint_dir, "best_model.pth")
         print(f"\n--- New best score: {current_score:.4f} Saving checkpoint... ---")
-        # Use the required function to save the PyTorch weights.
-        if save_pth_weights: export_torch_weights(model, best_checkpoint_path)
+        # Save the PyTorch weights.
+        if save_pth_weights:
+            export_torch_weights(model, best_checkpoint_path)
+            # Persist best_score alongside the .pth so future --pretrained
+            # runs can resume the monotonic-best behaviour.
+            try:
+                meta_path = join(checkpoint_dir, "best_model.json")
+                with open(meta_path, 'w') as f:
+                    json.dump({"best_score": float(current_score)}, f)
+            except Exception as e:
+                print(f"[save_if_best] Failed to write best_score sidecar: {e}")
         if save_onnx_weights:
-            for input_tensor, _ in train_loader_f(train_set, 1, num_workers):
-                t = input_tensor.to(torch_device())
-                export_model_to_onnx(model, t, join(checkpoint_dir, "best_model.onnx") if save_path else onnx_file)
-                break
+            t = first_tensor(train_set, num_workers)
+            export_model_to_onnx(model, t, join(checkpoint_dir, "best_model.onnx") if save_path else onnx_file)
+
+
+def load_pretrained_weights(model, model_name):
+    """
+    Load weights from the .pth checkpoint that was saved by save_if_best,
+    if one exists for this model. The path mirrors the save convention:
+        <ckpt_dir>/<ModelName>/best_model.pth
+
+    If a sidecar best_model.json is also present, the recorded best_score
+    is restored on the model so save_if_best only overwrites the
+    checkpoint when a strictly better score is reached in the new run.
+
+    Returns True if weights were loaded, False otherwise. Silently skips
+    loading when:
+      - no checkpoint file is present (first training run for this model)
+      - the architecture has changed since the checkpoint was saved
+        (state_dict key/shape mismatch)
+    In both cases training proceeds with the model's current (typically
+    randomly initialised) weights.
+    """
+    checkpoint_dir = ckpt_dir / model_name.split('.')[-1]
+    best_checkpoint_path = join(checkpoint_dir, "best_model.pth")
+
+    if not exists(best_checkpoint_path):
+        print(f"[pretrained] No checkpoint found at {best_checkpoint_path}; "
+              f"training from scratch.")
+        return False
+
+    print(f"[pretrained] Loading weights from {best_checkpoint_path}")
+    try:
+        device = next(model.parameters()).device
+        state_dict = torch.load(
+            best_checkpoint_path, map_location=device, weights_only=True
+        )
+        model.load_state_dict(state_dict, strict=True)
+        print(f"[pretrained] Weights loaded successfully.")
+    except (RuntimeError, KeyError) as e:
+        print(f"[pretrained] Failed to load checkpoint "
+              f"(likely architecture mismatch since save): {e}")
+        print(f"[pretrained] Continuing with current (random) weights.")
+        return False
+
+    # Restore the previous best_score so save_if_best doesn't overwrite
+    # the checkpoint with something worse.
+    meta_path = join(checkpoint_dir, "best_model.json")
+    if exists(meta_path):
+        try:
+            with open(meta_path) as f:
+                meta = json.load(f)
+            if 'best_score' in meta:
+                setattr(model, 'best_score', float(meta['best_score']))
+                print(f"[pretrained] Restored best_score = "
+                      f"{meta['best_score']:.6f} from sidecar.")
+        except Exception as e:
+            print(f"[pretrained] Could not read best_score sidecar: {e}")
+
+    return True
+
+
+def first_tensor(train_set, num_workers=default_num_workers) -> Any:
+    t = None
+    for input_tensor, _ in train_loader_f(train_set, 1, num_workers):
+        t = input_tensor.to(torch_device())
+        break
+    return t
+
+def get_in_shape(train_set, num_workers=default_num_workers):
+    return first_tensor(train_set, num_workers).cpu().numpy().shape
 
 
 #  FUNCTIONS FOR SAVING AND LOADING WEIGHTS
@@ -248,7 +302,7 @@ def export_torch_weights(model, path):
 
 def args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--config', type=str, default=default_config,
+    parser.add_argument('-c', '--config', type=str, default=None, action='append',
                         help="Configuration specifying the model training pipelines. The default value for all configurations.")
     parser.add_argument('-p', '--nn_prm', type=json.loads, default=default_nn_hyperparameters,
                         help="JSON string with fixed hyperparameter values for neural network training, e.g. -p '{\"lr\": 0.0061, \"momentum\": 0.7549, \"batch\": 4}'")
@@ -290,4 +344,115 @@ def args():
                         help=f'Enable saving of the best model weights in PyTorch checkpoints; default {default_save_pth_weights}')
     parser.add_argument('--save_onnx_weights', type=bool, default=default_save_onnx_weights,
                         help=f'Enable saving of the best model weights in ONNX format; default {default_save_onnx_weights}')
-    return parser.parse_args()
+    parser.add_argument('--layer_analysis', action='store_true', default=default_layer_analysis,
+                        help='Enable per-layer analysis (every epoch for first 5, then every 5 epochs)')
+    a = parser.parse_args()
+
+    if a.config is None:
+        a.config = default_config
+    elif len(a.config) == 1:
+        a.config = a.config[0]
+
+    return a
+
+
+def import_by_path(path: str):
+    mod_path, _, cls_name = path.rpartition(".")
+    if not mod_path:
+        raise ImportError(f"Invalid import path: {path}")
+    mod = importlib.import_module(mod_path)
+    return getattr(mod, cls_name)
+
+def get_device_type() -> str:
+    try:
+        name = platform.node()
+        if name:
+            return name
+    except Exception:
+        pass
+    return "unknown_device"
+
+def sanitize_filename(s: str) -> str:
+    return "".join(c if (c.isalnum() or c in ("-", "_")) else "_" for c in s)
+
+def ensure_outdir(path: str) -> str:
+    d = os.path.dirname(path) or "."
+    os.makedirs(d, exist_ok=True)
+    return path
+
+def sanitize_name(name: str) -> str:
+    if not name:
+        return "run"
+    return "".join(c if (c.isalnum() or c in ("-", "_")) else "_" for c in name)
+
+def extract_arch_name(model_class_path: str) -> str:
+    parts = model_class_path.split(".")
+    if len(parts) >= 2:
+        return parts[-2]
+    return parts[-1]
+
+def default_outpath(model_name: str, config: Optional[str] = None) -> str:
+    ts = datetime.datetime.now().strftime("%Y%m%dT%H%M%SZ")
+    this_dir = os.path.dirname(os.path.dirname(__file__))
+
+    if config:
+        folder_base = f"{config}_{model_name}"
+    else:
+        folder_base = model_name or "model"
+
+    folder_safe = sanitize_name(folder_base)
+    folder_name = f"{folder_safe}-{ts}"
+
+    run_dir = os.path.join(this_dir, "stat", "run", folder_name)
+    os.makedirs(run_dir, exist_ok=True)
+
+    device = sanitize_filename(get_device_type())
+    filename = f"windows_{device}.json"
+    return os.path.join(run_dir, filename)
+
+
+# ---------------- system sampling ----------------
+
+def sample_nvidia_smi():
+    if shutil.which("nvidia-smi") is None:
+        return None
+    q = "--query-gpu=index,name,driver_version,memory.total,memory.used,memory.free,utilization.gpu --format=csv,noheader,nounits"
+    try:
+        out = subprocess.check_output(["nvidia-smi"] + q.split(), stderr=subprocess.DEVNULL)
+        out = out.decode("utf-8").strip()
+        gpus = []
+        for line in out.splitlines():
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) >= 7:
+                idx, name, driver, total, used, free, util = parts[:7]
+                gpus.append({
+                    "index": int(idx),
+                    "name": name,
+                    "driver": driver,
+                    "memory_total_mb": int(total),
+                    "memory_used_mb": int(used),
+                    "memory_free_mb": int(free),
+                    "util_percent": (int(util) if util != "N/A" else None)
+                })
+        return gpus
+    except Exception:
+        return None
+
+def sample_system():
+    if psutil is None:
+        return None
+    vm = psutil.virtual_memory()
+    p = psutil.Process()
+    try:
+        mem = p.memory_info().rss
+    except Exception:
+        mem = None
+    return {
+        "total_ram_bytes": vm.total,
+        "available_ram_bytes": vm.available,
+        "used_ram_bytes": vm.used,
+        "ram_percent": vm.percent,
+        "cpu_percent": psutil.cpu_percent(interval=None),
+        "process_rss_bytes": mem
+    }
+

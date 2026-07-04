@@ -9,5 +9,63 @@
         "momentum": 0.9,
         "transform": "norm_256_flip",
         "uid": "268985784c034788d34ad31d0305cb7f"
+    },
+    {
+        "accuracy": 0.2866,
+        "batch": 256,
+        "duration": 32994698518,
+        "lr": 0.42485982348582346,
+        "metric_acc": 0.2866,
+        "momentum": 0.15242030322294253,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAutocontrast_Pad",
+        "uid": "984a99ed4f595f5b43dc6d9f0b6e3cf5",
+        "train_stat": {
+            "train_loss": 1.9542797931603022,
+            "test_loss": 1.9496637791395188,
+            "train_accuracy": 0.28204,
+            "gradient_norm": 0.909330782205357,
+            "samples_per_second": 1515.4018058019515,
+            "best_accuracy": 0.2866,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.8,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10459220.0,
+            "ram_usage_percent": 32.1,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 8603251.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17795.5,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.2486,
+        "batch": 256,
+        "duration": 16429564403,
+        "lr": 0.42485982348582346,
+        "momentum": 0.15242030322294253,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAutocontrast_Pad",
+        "uid": "bb2bac3fc37e783e6905b9b0b5444392"
+    },
+    {
+        "accuracy": 0.2328,
+        "batch": 512,
+        "duration": 12958900429,
+        "lr": 0.014271747933938907,
+        "momentum": 0.49505555665666756,
+        "transform": "bf-v1-RandomAutocontrast_RandomRotation",
+        "uid": "ad915482ba0c8532be94c2e8d1760fba"
+    },
+    {
+        "accuracy": 0.149,
+        "batch": 1024,
+        "duration": 12001329156,
+        "lr": 0.009232426330277516,
+        "momentum": 0.02678337274308129,
+        "transform": "bf-v1-CenterCrop_RandomSolarize_2",
+        "uid": "f9406a96f0b875e9e1d2b36b5f333f14"
     }
 ]

@@ -1,0 +1,34 @@
+[
+    {
+        "accuracy": 0.4704,
+        "batch": 64,
+        "dropout": 0.14589091632437673,
+        "duration": 112661092829,
+        "lr": 0.015941959538964667,
+        "lr_now": 0.015941959538964667,
+        "momentum": 0.5275481114777497,
+        "transform": "bf-v1-RandomPerspective_RandomAdjustSharpnes_6",
+        "uid": "e7239b029b1c506a063683e88c42fbdc",
+        "train_stat": {
+            "train_loss": 1.380604359347497,
+            "test_loss": 1.393939631000446,
+            "train_accuracy": 0.48052,
+            "gradient_norm": 2.99999989807462,
+            "samples_per_second": 865.0261289423142,
+            "best_accuracy": 0.4704,
+            "best_epoch": 2,
+            "epoch_max": 5,
+            "gpu_memory_kb": 731856.0
+        }
+    },
+    {
+        "accuracy": 0.4261,
+        "batch": 512,
+        "dropout": 0.17533285814439692,
+        "duration": 22968153994,
+        "lr": 0.03383766039581523,
+        "momentum": 0.9396684714312454,
+        "transform": "bf-v1-RandomAdjustSharpnes_CenterCrop",
+        "uid": "8e1da3b1cbedbfe9ba367e639a96c781"
+    }
+]

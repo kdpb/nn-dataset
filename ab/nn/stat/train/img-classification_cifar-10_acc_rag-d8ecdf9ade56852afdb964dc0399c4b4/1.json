@@ -1,5 +1,36 @@
 [
     {
+        "accuracy": 0.2591,
+        "batch": 64,
+        "duration": 19841013387,
+        "lr": 0.8634311919741772,
+        "metric_acc": 0.2591,
+        "momentum": 0.05931847958063774,
+        "transform": "norm_64_flip",
+        "uid": "ecca08c8ffa8b308be96119f03c2dca0",
+        "train_stat": {
+            "train_loss": 2.043160446921883,
+            "test_loss": 2.033326164932008,
+            "train_accuracy": 0.25744,
+            "gradient_norm": 0.9111191389464065,
+            "samples_per_second": 2520.0445877436214,
+            "best_accuracy": 0.2591,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.0,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 10441256.0,
+            "ram_usage_percent": 32.0,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 8603251.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17685.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.2474,
         "batch": 64,
         "dropout": 0.2,
@@ -9,5 +40,32 @@
         "momentum": 0.9,
         "transform": "norm_256_flip",
         "uid": "268985784c034788d34ad31d0305cb7f"
+    },
+    {
+        "accuracy": 0.2436,
+        "batch": 64,
+        "duration": 11912820121,
+        "lr": 0.8634311919741772,
+        "momentum": 0.05931847958063774,
+        "transform": "norm_64_flip",
+        "uid": "d01dc24e08daa51399a3a1e936457281"
+    },
+    {
+        "accuracy": 0.1656,
+        "batch": 1,
+        "duration": 80135156183,
+        "lr": 0.0008132592930002004,
+        "momentum": 0.33262944234358827,
+        "transform": "bf-v1-Pad_RandomAutocontrast_RandomAdjustSharpnes",
+        "uid": "acf70de030f624277fda3aed6b7e6a24"
+    },
+    {
+        "accuracy": 0.1353,
+        "batch": 512,
+        "duration": 12611481841,
+        "lr": 0.004520469130894795,
+        "momentum": 0.1378145326435658,
+        "transform": "bf-v1-RandomAutocontrast_RandomPosterize_5",
+        "uid": "7203169ce0bb207b7ef6e99ccf73b7c4"
     }
 ]

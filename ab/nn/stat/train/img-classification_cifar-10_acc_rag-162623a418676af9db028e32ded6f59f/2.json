@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.4895,
+        "batch": 4,
+        "duration": 66528252044,
+        "lr": 0.11791883576922609,
+        "momentum": 0.2745101994701905,
+        "transform": "bf-v1-RandomCrop_82",
+        "uid": "824d6b5fa005db7b49b997d0ea9f9ba9"
+    },
+    {
+        "accuracy": 0.4781,
+        "batch": 4,
+        "duration": 86002635589,
+        "lr": 0.11791883576922609,
+        "metric_acc": 0.4781,
+        "momentum": 0.2745101994701905,
+        "transform": "bf-v1-RandomCrop_82",
+        "uid": "3db3ddd74a1c40743e6ee8171eee38f4",
+        "train_stat": {
+            "train_loss": 1.4927831041783095,
+            "test_loss": 1.4923537227720023,
+            "train_accuracy": 0.48044,
+            "gradient_norm": 0.9999998499882744,
+            "samples_per_second": 1151.082610197532,
+            "best_accuracy": 0.4781,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 27.9,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 18445624.0,
+            "ram_usage_percent": 56.5,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 12653103.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17913.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.4743,
+        "batch": 4,
+        "duration": 39787631574,
+        "lr": 0.11791883576922609,
+        "momentum": 0.2745101994701905,
+        "transform": "bf-v1-RandomCrop_82",
+        "uid": "464802b84c979e1aaac9417387b05368",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3715,
+        "batch": 256,
+        "duration": 28109605708,
+        "lr": 0.023714827206240695,
+        "momentum": 0.8937500010872865,
+        "transform": "bf-v1-CenterCrop_RandomRotation_RandomAdjustSharpnes",
+        "uid": "dc3ae89fb82f932a5e62a903adfbea1c"
+    },
+    {
+        "accuracy": 0.3212,
+        "batch": 128,
+        "duration": 30559254617,
+        "lr": 0.009788776233809108,
+        "momentum": 0.1553703814786891,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomPosterize_RandomPerspective",
+        "uid": "c61260fc8012497f624db822fcc70bcf"
+    }
+]

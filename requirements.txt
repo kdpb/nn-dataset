@@ -1,24 +1,38 @@
-torch>=2.6.0
-torchvision>=0.21.0
+torch>=2.4,<2.9
+diffusers==0.33.0
+#
+# NOTE (Windows): `ai-edge-torch` currently pulls `ai-edge-tensorflow`/`tf-nightly`/
+# `ai-edge-litert` which don't ship Windows wheels, so pip can't resolve them.
+# The codebase already falls back to `tf.lite.Interpreter` when LiteRT isn't present.
+# Install `ai-edge-torch` only on non-Windows platforms.
+ai-edge-torch; platform_system != "Windows"
+torchvision>=0.21,<0.24
 transformers
+bitsandbytes
 accelerate
-diffusers
+einops
 ftfy
 tqdm
 onnx
+onnxruntime
 optuna
 datasets>=3.2.0
+kagglehub
 pycocotools~=2.0.8
 numpy
 pandas
 scipy
 scikit-learn
+matplotlib
 requests>=2.32.3
 pillow
 setuptools
 nltk>=3.9.1
 evaluate
 gdown
+datasketch # to check code novelty
+zstandard
+openpyxl
 
 # For the code evaluator
 flake8~=7.1.1

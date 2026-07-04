@@ -1,5 +1,49 @@
 [
     {
+        "accuracy": 0.4767,
+        "batch": 512,
+        "dropout": 0.155037874645496,
+        "duration": 250239076958,
+        "lr": 0.024931839286921255,
+        "lr_now": 0.024931839286921255,
+        "momentum": 0.9218147353054256,
+        "transform": "bf-v1-Pad_RandomAdjustSharpnes_RandomPosterize",
+        "uid": "d101fe3844dabd1725e4efaad5a113ec",
+        "train_stat": {
+            "train_loss": 1.3773884505641705,
+            "test_loss": 1.4054671764373778,
+            "train_accuracy": 0.48122,
+            "gradient_norm": 2.664253422387905,
+            "samples_per_second": 590.2926314494078,
+            "best_accuracy": 0.4767,
+            "best_epoch": 3,
+            "epoch_max": 5,
+            "gpu_memory_kb": 266624.5
+        }
+    },
+    {
+        "accuracy": 0.445,
+        "batch": 8,
+        "dropout": 0.028118739964910933,
+        "duration": 322767767654,
+        "lr": 0.002164762694117559,
+        "lr_now": 0.002164762694117559,
+        "momentum": 0.5619867826278493,
+        "transform": "bf-v1-RandomAutocontrast_RandomGrayscale_2",
+        "uid": "3474ebdba50ece77830c09ff93d911bf",
+        "train_stat": {
+            "train_loss": 1.4808320514631272,
+            "test_loss": 1.5111897628784179,
+            "train_accuracy": 0.45864,
+            "gradient_norm": 2.999999712025541,
+            "samples_per_second": 468.82184412149496,
+            "best_accuracy": 0.445,
+            "best_epoch": 3,
+            "epoch_max": 5,
+            "gpu_memory_kb": 266624.5
+        }
+    },
+    {
         "accuracy": 0.3883,
         "batch": 4,
         "dropout": 0.42385498503732727,
@@ -8,6 +52,16 @@
         "momentum": 0.7171446172714789,
         "transform": "bf-v1-RandomPerspective_103",
         "uid": "e69f5a4b07e06b111f9c1b55c9dfec45"
+    },
+    {
+        "accuracy": 0.3435,
+        "batch": 16,
+        "dropout": 0.13083676003203493,
+        "duration": 49344048295,
+        "lr": 0.0018847029347671424,
+        "momentum": 0.4425551135891165,
+        "transform": "bf-v1-RandomPerspective_CenterCrop",
+        "uid": "fcc4f8df646181a86dfc861a027ef049"
     },
     {
         "accuracy": 0.1441,

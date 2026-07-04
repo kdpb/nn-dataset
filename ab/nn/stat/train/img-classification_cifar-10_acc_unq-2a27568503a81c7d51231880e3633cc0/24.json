@@ -1,0 +1,23 @@
+[
+    {
+        "accuracy": 0.7929,
+        "batch": 64,
+        "duration": 588594051653,
+        "lr": 0.015250357624187721,
+        "lr_now": 0.015250357624187721,
+        "momentum": 0.7721107065621651,
+        "transform": "bf-v1-RandomCrop_RandomPosterize",
+        "uid": "b2565cb11a573bf7f4b7295ce2940f60",
+        "train_stat": {
+            "train_loss": 0.0005288868576086953,
+            "test_loss": 1.0576671864956049,
+            "train_accuracy": 1.0,
+            "gradient_norm": 1.0661533287965899,
+            "samples_per_second": 2039.5212915296381,
+            "best_accuracy": 0.7929,
+            "best_epoch": 24,
+            "epoch_max": 50,
+            "gpu_memory_kb": 1338920.0
+        }
+    }
+]

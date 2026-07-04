@@ -1,5 +1,17 @@
 [
     {
+        "accuracy": 0.4814,
+        "batch": 64,
+        "duration": 9681082031,
+        "lr": 0.11645649580051638,
+        "momentum": 0.6370320935092402,
+        "transform": "bf-v1-Pad_RandomPosterize_CenterCrop",
+        "uid": "00a3ee0dbd5d8edcb47a22c5cc4c7db6",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
         "accuracy": 0.4468,
         "batch": 64,
         "duration": 11107184286,
@@ -7,6 +19,37 @@
         "momentum": 0.6370320935092402,
         "transform": "bf-v1-Pad_RandomPosterize_CenterCrop",
         "uid": "ea264e644448c6f37a44e2ba3ccde225"
+    },
+    {
+        "accuracy": 0.3423,
+        "batch": 64,
+        "duration": 24788690559,
+        "lr": 0.11645649580051638,
+        "metric_acc": 0.3423,
+        "momentum": 0.6370320935092402,
+        "transform": "bf-v1-Pad_RandomPosterize_CenterCrop",
+        "uid": "21dcfd436a964f0b16daf2e5902d39db",
+        "train_stat": {
+            "train_loss": 1.685838624492021,
+            "test_loss": 1.6907461927195264,
+            "train_accuracy": 0.34222,
+            "gradient_norm": 0.9999997044112995,
+            "samples_per_second": 2017.054449275438,
+            "best_accuracy": 0.3423,
+            "best_epoch": 1,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 15.4,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 14172868.0,
+            "ram_usage_percent": 43.4,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 12415353.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 18027.0,
+            "gpu_memory_usage_percent": 0.07
+        }
     },
     {
         "accuracy": 0.3393,
@@ -45,5 +88,17 @@
         "momentum": 0.08504925923354534,
         "transform": "bf-v1-CenterCrop_Pad_RandomAutocontrast",
         "uid": "ca751b351a2c56bb8e8f65f38b0a2756"
+    },
+    {
+        "accuracy": 0.2236,
+        "batch": 2048,
+        "duration": 11128895562,
+        "lr": 0.05295632037868577,
+        "momentum": 0.6070878801834382,
+        "transform": "bf-v1-RandomSolarize_RandomHorizontalFlip_5",
+        "uid": "99464af1150591d8e610e8fc19ba5e29",
+        "train_stat": {
+            "epoch_max": 5
+        }
     }
 ]

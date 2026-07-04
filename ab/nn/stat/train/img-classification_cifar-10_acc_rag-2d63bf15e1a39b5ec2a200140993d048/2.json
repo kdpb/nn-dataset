@@ -1,0 +1,84 @@
+[
+    {
+        "accuracy": 0.552,
+        "batch": 64,
+        "duration": 30299525546,
+        "lr": 0.0004406389079519034,
+        "momentum": 0.9310934506319095,
+        "transform": "norm_32_flip",
+        "uid": "5283b7a827b7e411c9977f5ca6704dc3"
+    },
+    {
+        "accuracy": 0.5481,
+        "batch": 64,
+        "duration": 11554609964,
+        "lr": 0.0004406389079519034,
+        "momentum": 0.9310934506319095,
+        "transform": "norm_32_flip",
+        "uid": "137dd95ce7e8ad41761a9500450cf58a",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.5437,
+        "batch": 64,
+        "duration": 30465524454,
+        "lr": 0.0004406389079519034,
+        "metric_acc": 0.5437,
+        "momentum": 0.9310934506319095,
+        "transform": "norm_32_flip",
+        "uid": "a9387b6a82bd137c7a9ade85010c3725",
+        "train_stat": {
+            "train_loss": 1.32298681239033,
+            "test_loss": 1.3246277798512938,
+            "train_accuracy": 0.54172,
+            "gradient_norm": 0.999999920813731,
+            "samples_per_second": 3241.788888501111,
+            "best_accuracy": 0.5437,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 11.8,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 18205512.0,
+            "ram_usage_percent": 55.8,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 1503657.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 19824.0,
+            "gpu_memory_usage_percent": 0.08
+        }
+    },
+    {
+        "accuracy": 0.4963,
+        "batch": 512,
+        "duration": 67534864609,
+        "lr": 0.05966413956382882,
+        "momentum": 0.3377205419652889,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAutocontrast_RandomGrayscale",
+        "uid": "bdd348fbd82a4fb3b41c9c0f1877f0d4"
+    },
+    {
+        "accuracy": 0.3563,
+        "batch": 2048,
+        "duration": 161108731734,
+        "lr": 0.0710096325674259,
+        "lr_now": 0.0710096325674259,
+        "momentum": 0.21675959057587513,
+        "transform": "bf-v1-Pad_RandomAutocontrast_RandomPosterize",
+        "uid": "24382b4557176a8c346b6f69198ce4d5",
+        "train_stat": {
+            "train_loss": 1.9174758768081666,
+            "test_loss": 1.918942642211914,
+            "train_accuracy": 0.35888,
+            "gradient_norm": 0.9999998291198091,
+            "samples_per_second": 627.3679190919406,
+            "best_accuracy": 0.3563,
+            "best_epoch": 2,
+            "epoch_max": 5,
+            "gpu_memory_kb": 5097860.5
+        }
+    }
+]

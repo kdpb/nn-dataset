@@ -1,5 +1,48 @@
 [
     {
+        "accuracy": 0.3924,
+        "batch": 4,
+        "duration": 109457182871,
+        "lr": 6.501317199181189e-05,
+        "momentum": 0.9950222786080986,
+        "transform": "bf-v1-RandomCrop_RandomRotation",
+        "uid": "290c1cf93a63a67403c61f9bad6ada7b",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3914,
+        "batch": 4,
+        "duration": 223305589453,
+        "lr": 6.501317199181189e-05,
+        "metric_acc": 0.3914,
+        "momentum": 0.9950222786080986,
+        "transform": "bf-v1-RandomCrop_RandomRotation",
+        "uid": "d989cf8ebd499982edcc10bd505b1e4d",
+        "train_stat": {
+            "train_loss": 1.6689446830940247,
+            "test_loss": 1.6612513165593148,
+            "train_accuracy": 0.38838,
+            "gradient_norm": 0.9999998693152612,
+            "samples_per_second": 1122.9447815002895,
+            "best_accuracy": 0.3914,
+            "best_epoch": 5,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.4,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 12139300.0,
+            "ram_usage_percent": 37.2,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 20424743.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17870.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
         "accuracy": 0.3855,
         "batch": 4,
         "duration": 151043140573,
@@ -16,5 +59,14 @@
         "momentum": 0.13388595563868022,
         "transform": "bf-v1-CenterCrop_Pad_RandomHorizontalFlip",
         "uid": "a910088cbd0086788113a8e3191ba0c5"
+    },
+    {
+        "accuracy": 0.292,
+        "batch": 16,
+        "duration": 80262681121,
+        "lr": 0.0005708155979255064,
+        "momentum": 0.28735026321338486,
+        "transform": "bf-v1-Pad_38",
+        "uid": "7bacf8dccf470f238082bb9178116416"
     }
 ]

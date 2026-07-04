@@ -1,0 +1,81 @@
+[
+    {
+        "accuracy": 0.4043,
+        "batch": 128,
+        "duration": 26175127023,
+        "lr": 0.01747729800346529,
+        "momentum": 0.758729095737493,
+        "transform": "bf-v1-RandomCrop_CenterCrop_RandomAutocontrast",
+        "uid": "f9cd2e9169428a933a8347f42a27dd09"
+    },
+    {
+        "accuracy": 0.3938,
+        "batch": 128,
+        "duration": 46176691187,
+        "lr": 0.01747729800346529,
+        "metric_acc": 0.3938,
+        "momentum": 0.758729095737493,
+        "transform": "bf-v1-RandomCrop_CenterCrop_RandomAutocontrast",
+        "uid": "58d26d226c642656abd6483576404704",
+        "train_stat": {
+            "train_loss": 1.6724350909747736,
+            "test_loss": 1.6658072728144973,
+            "train_accuracy": 0.39534,
+            "gradient_norm": 0.9999996480438444,
+            "samples_per_second": 2168.0509362369135,
+            "best_accuracy": 0.3938,
+            "best_epoch": 2,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 9.2,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 20335728.0,
+            "ram_usage_percent": 62.3,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 21143703.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17742.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3868,
+        "batch": 128,
+        "duration": 17906777425,
+        "lr": 0.01747729800346529,
+        "momentum": 0.758729095737493,
+        "transform": "bf-v1-RandomCrop_CenterCrop_RandomAutocontrast",
+        "uid": "f25b42c89b42722748117f14e9a48ea3",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.378,
+        "batch": 256,
+        "duration": 32701638677,
+        "lr": 0.3405915214468861,
+        "momentum": 0.376907388665495,
+        "transform": "bf-v1-RandomCrop_Pad_RandomHorizontalFlip",
+        "uid": "e702838148e70a9e888ca6c390f6c0cf"
+    },
+    {
+        "accuracy": 0.3776,
+        "batch": 4,
+        "duration": 69413355238,
+        "lr": 0.00043154332811285546,
+        "momentum": 0.9833172082475761,
+        "transform": "bf-v1-Pad_RandomEqualize_RandomAdjustSharpnes",
+        "uid": "ba194b9366959f4e5f1443abc05a494e"
+    },
+    {
+        "accuracy": 0.2681,
+        "batch": 128,
+        "duration": 34168248324,
+        "lr": 6.117152334153843e-05,
+        "momentum": 0.9946384227855042,
+        "transform": "bf-v1-Pad_RandomAutocontrast_RandomAdjustSharpnes",
+        "uid": "55e49cc2a73b1fea8505c86b5b9523d0"
+    }
+]

@@ -1,5 +1,67 @@
 [
     {
+        "accuracy": 0.5729936305732484,
+        "batch": 4,
+        "dropout": 0.14796875147451183,
+        "duration": 326703218912,
+        "lr": 0.014312726174841604,
+        "momentum": 0.6227067125554069,
+        "transform": "bf-v1-Pad_RandomPosterize_RandomHorizontalFlip",
+        "uid": "7eab32d64e06ae35de1289ee96a1b7df"
+    },
+    {
+        "accuracy": 0.5373248407643312,
+        "batch": 16,
+        "dropout": 0.31639063670198037,
+        "duration": 653409115357,
+        "lr": 0.1703776903314672,
+        "metric_acc": 0.5373248407643312,
+        "momentum": 0.20430673246633801,
+        "transform": "git_processor",
+        "uid": "d602a0bbc97a5dcc89fe1b19d191d01a",
+        "train_stat": {
+            "train_loss": 1.249261832217107,
+            "test_loss": 1.4189165084342645,
+            "train_accuracy": 0.5802091033900095,
+            "gradient_norm": 2.9999996096452173,
+            "samples_per_second": 48.12297792557932,
+            "best_accuracy": 0.5373248407643312,
+            "best_epoch": 4,
+            "epoch_max": 5,
+            "cpu_count": 32,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 11.3,
+            "total_ram_kb": 131724388.0,
+            "occupied_ram_kb": 8595424.0,
+            "ram_usage_percent": 9.4,
+            "gpu_type": "NVIDIA GeForce RTX 3090",
+            "gpu_memory_kb": 403531.0,
+            "gpu_total_memory_kb": 24703168.0,
+            "occupied_gpu_memory_kb": 292627.0,
+            "gpu_memory_usage_percent": 1.18
+        }
+    },
+    {
+        "accuracy": 0.5024203821656051,
+        "batch": 4,
+        "dropout": 0.09650879209182389,
+        "duration": 666612681955,
+        "lr": 0.0058065196529239055,
+        "momentum": 0.7329050112545158,
+        "transform": "bf-v1-Grayscale_RandomAdjustSharpnes_2",
+        "uid": "08832ad9c01db04078c7755ec6e9b046"
+    },
+    {
+        "accuracy": 0.434140127388535,
+        "batch": 32,
+        "dropout": 0.2717232038329502,
+        "duration": 629174313334,
+        "lr": 0.023510956664032905,
+        "momentum": 0.82855195330285,
+        "transform": "bf-v1-Grayscale_RandomAdjustSharpnes_2",
+        "uid": "acd276c6850920dec5e137cdb201dd16"
+    },
+    {
         "accuracy": 0.27847133757961784,
         "batch": 128,
         "dropout": 0.24766281939778595,

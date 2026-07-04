@@ -1,5 +1,15 @@
 [
     {
+        "accuracy": 0.4893,
+        "batch": 2,
+        "dropout": 0.04815783155738579,
+        "duration": 108664943685,
+        "lr": 0.038289858150530195,
+        "momentum": 0.2884108812899001,
+        "transform": "bf-v1-Pad_RandomHorizontalFlip_RandomAdjustSharpnes",
+        "uid": "fa702ffb4269039d31009403923c9c58"
+    },
+    {
         "accuracy": 0.4499,
         "batch": 4,
         "dropout": 0.2757415517092435,
@@ -9,5 +19,49 @@
         "momentum": 0.1728507106578624,
         "transform": "norm_32_flip",
         "uid": "3f4ab374fe20f793035741ac642edbd2"
+    },
+    {
+        "accuracy": 0.4006,
+        "batch": 16,
+        "dropout": 0.24960502460425465,
+        "duration": 74397417247,
+        "lr": 0.02243646870572598,
+        "lr_now": 0.02243646870572598,
+        "momentum": 0.022811221411433324,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAdjustSharpnes_RandomCrop",
+        "uid": "a70c1ee909dd32e3d7b1bf6260207a23",
+        "train_stat": {
+            "train_loss": 1.583386626548767,
+            "test_loss": 1.5875862708091737,
+            "train_accuracy": 0.39916,
+            "gradient_norm": 2.99999952668291,
+            "samples_per_second": 672.0686754926649,
+            "best_accuracy": 0.4006,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "gpu_memory_kb": 688268.5
+        }
+    },
+    {
+        "accuracy": 0.3133,
+        "batch": 2,
+        "dropout": 0.06770109490854415,
+        "duration": 201176574122,
+        "lr": 0.0008363562328290987,
+        "lr_now": 0.0008363562328290987,
+        "momentum": 0.7084875040839861,
+        "transform": "bf-v1-CenterCrop_RandomRotation_RandomAdjustSharpnes",
+        "uid": "915818d12d4253e3e2395e35d4013d8f",
+        "train_stat": {
+            "train_loss": 1.8012539918917418,
+            "test_loss": 1.7937880659341812,
+            "train_accuracy": 0.31578,
+            "gradient_norm": 2.9999997526326885,
+            "samples_per_second": 248.53821551148687,
+            "best_accuracy": 0.3133,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "gpu_memory_kb": 437881.0
+        }
     }
 ]

@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.3251,
+        "batch": 16,
+        "duration": 56798658028,
+        "lr": 0.001623346940949503,
+        "momentum": 0.17818680178607127,
+        "transform": "bf-v1-Pad_RandomRotation_RandomHorizontalFlip",
+        "uid": "9fb7ddb554e0b0ad283eac6587fe5b08"
+    },
+    {
+        "accuracy": 0.3209,
+        "batch": 16,
+        "duration": 52136777640,
+        "lr": 0.001623346940949503,
+        "momentum": 0.17818680178607127,
+        "transform": "bf-v1-Pad_RandomRotation_RandomHorizontalFlip",
+        "uid": "97ed62da07dd1adda691491251b6681f",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3207,
+        "batch": 16,
+        "duration": 125734300940,
+        "lr": 0.001623346940949503,
+        "metric_acc": 0.3207,
+        "momentum": 0.17818680178607127,
+        "transform": "bf-v1-Pad_RandomRotation_RandomHorizontalFlip",
+        "uid": "42cd16c979e96eb3da12bed1fa717030",
+        "train_stat": {
+            "train_loss": 1.8921703134918213,
+            "test_loss": 1.8906987413406373,
+            "train_accuracy": 0.32354,
+            "gradient_norm": 0.9999997735993165,
+            "samples_per_second": 1187.7122345395119,
+            "best_accuracy": 0.3207,
+            "best_epoch": 3,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.8,
+            "total_ram_kb": 32627556.0,
+            "occupied_ram_kb": 9803524.0,
+            "ram_usage_percent": 30.0,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 5195270.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17913.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.2274,
+        "batch": 32,
+        "duration": 37946513583,
+        "lr": 5.521844389870301e-05,
+        "momentum": 0.5109921160387351,
+        "transform": "bf-v1-RandomAdjustSharpnes_CenterCrop",
+        "uid": "d06498edb936e55a7f8a774dfd87c3b8"
+    },
+    {
+        "accuracy": 0.2222,
+        "batch": 4096,
+        "duration": 30841253401,
+        "lr": 0.033425474202399746,
+        "momentum": 0.8995815133097389,
+        "transform": "echo_64_flip",
+        "uid": "add302a12e8946a0dd0b46885e3ac666"
+    }
+]

@@ -1,5 +1,27 @@
 [
     {
+        "accuracy": 0.6679,
+        "batch": 4,
+        "dropout": 0.08981573250142572,
+        "duration": 734594480415,
+        "lr": 0.002571884107477936,
+        "lr_now": 0.002571884107477936,
+        "momentum": 0.6167694678353378,
+        "transform": "bf-v1-RandomAdjustSharpnes_Pad_4",
+        "uid": "93bb8b1f8b4ce6a6c9ca1f78be1d6eea",
+        "train_stat": {
+            "train_loss": 0.8360754976601527,
+            "test_loss": 1.0095071665888653,
+            "train_accuracy": 0.70888,
+            "gradient_norm": 2.9999996149887203,
+            "samples_per_second": 339.8470757626529,
+            "best_accuracy": 0.6679,
+            "best_epoch": 5,
+            "epoch_max": 5,
+            "gpu_memory_kb": 23516814.0
+        }
+    },
+    {
         "accuracy": 0.393,
         "batch": 128,
         "dropout": 0.18871013644448514,
@@ -18,5 +40,27 @@
         "momentum": 0.4619417316707175,
         "transform": "bf-v1-CenterCrop_RandomGrayscale_6",
         "uid": "3d794efb163d84c61413ce94a6ad1e14"
+    },
+    {
+        "accuracy": 0.3308,
+        "batch": 32,
+        "dropout": 0.48357742135099774,
+        "duration": 364831959921,
+        "lr": 0.0003940489882977476,
+        "lr_now": 0.0003940489882977476,
+        "momentum": 0.8217969617709223,
+        "transform": "bf-v1-RandomAutocontrast_RandomRotation",
+        "uid": "4985a250d38c46a956044551f57fc120",
+        "train_stat": {
+            "train_loss": 1.7566196426549021,
+            "test_loss": 1.748682376294852,
+            "train_accuracy": 0.32708,
+            "gradient_norm": 2.9999996903990636,
+            "samples_per_second": 687.6004487888478,
+            "best_accuracy": 0.3308,
+            "best_epoch": 5,
+            "epoch_max": 5,
+            "gpu_memory_kb": 765931.5
+        }
     }
 ]

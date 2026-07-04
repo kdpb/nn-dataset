@@ -1,5 +1,15 @@
 [
     {
+        "accuracy": 0.5811464968152866,
+        "batch": 1,
+        "dropout": 0.28321093379270584,
+        "duration": 454827428947,
+        "lr": 0.010076487632550361,
+        "momentum": 0.4465312996810292,
+        "transform": "norm",
+        "uid": "47f9cee3c0c279cd24484e4c164592b5"
+    },
+    {
         "accuracy": 0.4884076433121019,
         "batch": 4,
         "dropout": 0.05287763829127906,
@@ -28,5 +38,27 @@
         "momentum": 0.7108391017336936,
         "transform": "echo_32",
         "uid": "2c63931739a98a2c87628d195e3004af"
+    },
+    {
+        "accuracy": 0.19694267515923566,
+        "batch": 2,
+        "dropout": 0.005641535311495249,
+        "duration": 508323006406,
+        "lr": 0.0021866888986454185,
+        "lr_now": 0.0021866888986454185,
+        "momentum": 0.24714461156216527,
+        "transform": "bf-v1-CenterCrop_22",
+        "uid": "baf3db7eef226e2834f71cd54b92464d",
+        "train_stat": {
+            "train_loss": 2.1906171533097183,
+            "test_loss": 2.2092867154766576,
+            "train_accuracy": 0.20857535114584433,
+            "gradient_norm": 2.9999997410714285,
+            "samples_per_second": 53.095615607785945,
+            "best_accuracy": 0.19694267515923566,
+            "best_epoch": 3,
+            "epoch_max": 5,
+            "gpu_memory_kb": 300298.5
+        }
     }
 ]

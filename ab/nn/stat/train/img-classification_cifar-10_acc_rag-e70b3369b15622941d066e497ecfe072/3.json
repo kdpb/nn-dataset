@@ -1,0 +1,72 @@
+[
+    {
+        "accuracy": 0.457,
+        "batch": 8,
+        "duration": 108290096567,
+        "lr": 0.04928575006178367,
+        "metric_acc": 0.457,
+        "momentum": 0.18132423549060417,
+        "transform": "bf-v1-CenterCrop_RandomRotation_RandomHorizontalFlip",
+        "uid": "863cb49105fca1efdb78d6b3c3d5c8c5",
+        "train_stat": {
+            "train_loss": 1.513344248113632,
+            "test_loss": 1.5205659474372863,
+            "train_accuracy": 0.46094,
+            "gradient_norm": 0.9999998616316689,
+            "samples_per_second": 1391.4531857123197,
+            "best_accuracy": 0.457,
+            "best_epoch": 3,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 22.2,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 19930604.0,
+            "ram_usage_percent": 61.1,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 21143703.0,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17742.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.4281,
+        "batch": 8,
+        "duration": 74588414109,
+        "lr": 0.04928575006178367,
+        "momentum": 0.18132423549060417,
+        "transform": "bf-v1-CenterCrop_RandomRotation_RandomHorizontalFlip",
+        "uid": "6ad2666313a231b31a73b1c12f57293f"
+    },
+    {
+        "accuracy": 0.4184,
+        "batch": 8,
+        "duration": 48230755693,
+        "lr": 0.04928575006178367,
+        "momentum": 0.18132423549060417,
+        "transform": "bf-v1-CenterCrop_RandomRotation_RandomHorizontalFlip",
+        "uid": "9f5ec8f11e39072a5d4fd2cb3f3a6df9",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3922,
+        "batch": 64,
+        "duration": 45791480135,
+        "lr": 0.9807379831979479,
+        "momentum": 0.8304105325673958,
+        "transform": "bf-v1-RandomCrop_RandomAdjustSharpnes_RandomAutocontrast",
+        "uid": "785f91d286fa50ca97ded926f297644a"
+    },
+    {
+        "accuracy": 0.2779,
+        "batch": 32,
+        "duration": 50243837001,
+        "lr": 0.00014898655358685017,
+        "momentum": 0.896059893259155,
+        "transform": "bf-v1-RandomRotation_Pad_2",
+        "uid": "54d322c31067127fbfa95b031972b286"
+    }
+]

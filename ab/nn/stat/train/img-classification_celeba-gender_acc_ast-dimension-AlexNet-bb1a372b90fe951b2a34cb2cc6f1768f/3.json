@@ -1,0 +1,64 @@
+[
+    {
+        "accuracy": 0.7198176535417293,
+        "batch": 128,
+        "dropout": 0.34810028851497066,
+        "duration": 380163057629,
+        "lr": 0.00035092309249704334,
+        "momentum": 0.9598779854690901,
+        "transform": "echo_64_flip",
+        "uid": "b9358abbd1628a9c72d1d07f2ba256b1"
+    },
+    {
+        "accuracy": 0.613515679791604,
+        "batch": 128,
+        "dropout": 0.40172921219651203,
+        "duration": 402255187713,
+        "lr": 1.639633411099459e-05,
+        "momentum": 0.08632737966082282,
+        "transform": "bf-v1-CenterCrop_Pad_4",
+        "uid": "44cb6c33a320c352f999094d94c55ffe"
+    },
+    {
+        "accuracy": 0.613515679791604,
+        "batch": 32,
+        "dropout": 0.2175969860091525,
+        "duration": 409502209495,
+        "lr": 0.0001450448728413099,
+        "momentum": 0.1536501453662119,
+        "transform": "norm_64",
+        "uid": "a6a8821be62a67f6a05faeaa173df3a8"
+    },
+    {
+        "accuracy": 0.613515679791604,
+        "batch": 4096,
+        "dropout": 0.1653891867697071,
+        "duration": 2306393420677,
+        "lr": 0.2897502804018884,
+        "metric_acc": 0.613515679791604,
+        "momentum": 0.328879938581208,
+        "transform": "bf-v1-Pad_RandomPosterize_CenterCrop",
+        "uid": "c81f2c235412ca409354b7293b8b5190",
+        "train_stat": {
+            "train_loss": 0.6799021050333977,
+            "test_loss": 0.66974378824234,
+            "train_accuracy": 0.5806291085580881,
+            "gradient_norm": 0.00855652070954292,
+            "samples_per_second": 198.19772847776412,
+            "best_accuracy": 0.6591022943592827,
+            "best_epoch": 1,
+            "epoch_max": 5,
+            "cpu_count": 128,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 6.1,
+            "total_ram_kb": 263708948.0,
+            "occupied_ram_kb": 42558500.0,
+            "ram_usage_percent": 19.7,
+            "gpu_type": "NVIDIA GeForce RTX 3090",
+            "gpu_memory_kb": 2029955.0,
+            "gpu_total_memory_kb": 24703168.0,
+            "occupied_gpu_memory_kb": 668569.5,
+            "gpu_memory_usage_percent": 2.71
+        }
+    }
+]

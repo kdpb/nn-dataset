@@ -1,0 +1,77 @@
+[
+    {
+        "accuracy": 0.5212738853503185,
+        "batch": 2,
+        "dropout": 0.48461165203947315,
+        "duration": 456004169723,
+        "lr": 0.005463681898533413,
+        "metric_acc": 0.5212738853503185,
+        "momentum": 0.516484196774585,
+        "transform": "norm_224",
+        "uid": "2d97641a3f758018161473eb854e7380",
+        "train_stat": {
+            "train_loss": 1.4139584754535508,
+            "test_loss": 1.500115833801072,
+            "train_accuracy": 0.5383884253881086,
+            "gradient_norm": 2.999999541485395,
+            "samples_per_second": 59.13512837232119,
+            "best_accuracy": 0.5212738853503185,
+            "best_epoch": 3,
+            "epoch_max": 5,
+            "cpu_count": 32,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 6.2,
+            "total_ram_kb": 131724388.0,
+            "occupied_ram_kb": 7123552.0,
+            "ram_usage_percent": 9.1,
+            "gpu_type": "NVIDIA GeForce RTX 3090",
+            "gpu_memory_kb": 753929.5,
+            "gpu_total_memory_kb": 24703168.0,
+            "occupied_gpu_memory_kb": 712101.0,
+            "gpu_memory_usage_percent": 2.88
+        }
+    },
+    {
+        "accuracy": 0.46038216560509554,
+        "batch": 4,
+        "dropout": 0.3070495209336789,
+        "duration": 145685112264,
+        "lr": 0.0036349837399054386,
+        "momentum": 0.9139566811507431,
+        "transform": "bf-v1-RandomPerspective_RandomPosterize_4",
+        "uid": "96de33b8d81aad8ddacabab595832ce1",
+        "train_stat": {
+            "epoch_max": 5
+        }
+    },
+    {
+        "accuracy": 0.3579617834394904,
+        "batch": 4,
+        "dropout": 0.43282255904443534,
+        "duration": 289730510916,
+        "lr": 0.012457753635453019,
+        "momentum": 0.7866952355711646,
+        "transform": "bf-v1-Pad_RandomHorizontalFlip_RandomAffine",
+        "uid": "816b8924e99ec10c8efb1ef613b78d20"
+    },
+    {
+        "accuracy": 0.24585987261146497,
+        "batch": 128,
+        "dropout": 0.013281770826918893,
+        "duration": 346642320153,
+        "lr": 0.02448463877511485,
+        "momentum": 0.6062891305647509,
+        "transform": "bf-v1-RandomAdjustSharpnes",
+        "uid": "de1a01145faa4dde7ec972cce87520bd"
+    },
+    {
+        "accuracy": 0.14751592356687898,
+        "batch": 128,
+        "dropout": 0.38462139718428695,
+        "duration": 270384631996,
+        "lr": 0.0004421718017401538,
+        "momentum": 0.7125312381663043,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAutocontrast_RandomGrayscale",
+        "uid": "a03a9aa71c672f7586ba54be834e8d1e"
+    }
+]

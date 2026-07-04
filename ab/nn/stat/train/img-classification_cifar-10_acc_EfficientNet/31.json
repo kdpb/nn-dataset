@@ -10,6 +10,28 @@
         "uid": "5c6659eab15d933ce20f2a1003200b1d"
     },
     {
+        "accuracy": 0.9095,
+        "batch": 32,
+        "dropout": 0.21748647506548613,
+        "duration": 4129800983140,
+        "lr": 0.01956859811841734,
+        "lr_now": 0.01956859811841734,
+        "momentum": 0.9024721047786726,
+        "transform": "echo_256",
+        "uid": "edcee31b9f8f81d3e9ab3ac32c9f940c",
+        "train_stat": {
+            "train_loss": 0.004032666309172818,
+            "test_loss": 0.5019252750676306,
+            "train_accuracy": 0.99876,
+            "gradient_norm": 2.9999993093278223,
+            "samples_per_second": 381.61999975295186,
+            "best_accuracy": 0.9095,
+            "best_epoch": 31,
+            "epoch_max": 50,
+            "gpu_memory_kb": 3728920.5
+        }
+    },
+    {
         "accuracy": 0.9044,
         "batch": 32,
         "dropout": 0.21748647506548613,
@@ -18,6 +40,50 @@
         "momentum": 0.9024721047786726,
         "transform": "echo_256",
         "uid": "871da0affade95f1eebc1828bf5efee2"
+    },
+    {
+        "accuracy": 0.9035,
+        "batch": 32,
+        "dropout": 0.21748647506548613,
+        "duration": 4040382787538,
+        "lr": 0.01956859811841734,
+        "lr_now": 0.01956859811841734,
+        "momentum": 0.9024721047786726,
+        "transform": "echo_256",
+        "uid": "81e26899635a5fef28814aaaacbed944",
+        "train_stat": {
+            "train_loss": 0.0034925366134447786,
+            "test_loss": 0.5396239917753963,
+            "train_accuracy": 0.99896,
+            "gradient_norm": 1.662593239751261,
+            "samples_per_second": 383.57501131799046,
+            "best_accuracy": 0.9057,
+            "best_epoch": 29,
+            "epoch_max": 50,
+            "gpu_memory_kb": 3728920.5
+        }
+    },
+    {
+        "accuracy": 0.9004,
+        "batch": 32,
+        "dropout": 0.21748647506548613,
+        "duration": 4088289330362,
+        "lr": 0.01956859811841734,
+        "lr_now": 0.01956859811841734,
+        "momentum": 0.9024721047786726,
+        "transform": "echo_256",
+        "uid": "c2ba1630a53e12f8b1e694e0c4041bbc",
+        "train_stat": {
+            "train_loss": 0.005243005710776925,
+            "test_loss": 0.4819623234777744,
+            "train_accuracy": 0.9984,
+            "gradient_norm": 0.16230865720294863,
+            "samples_per_second": 379.29324983806833,
+            "best_accuracy": 0.9051,
+            "best_epoch": 28,
+            "epoch_max": 50,
+            "gpu_memory_kb": 3728920.5
+        }
     },
     {
         "accuracy": 0.8716,

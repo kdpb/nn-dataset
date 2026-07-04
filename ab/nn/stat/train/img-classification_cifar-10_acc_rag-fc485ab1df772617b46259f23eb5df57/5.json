@@ -1,5 +1,17 @@
 [
     {
+        "accuracy": 0.7499,
+        "batch": 4,
+        "duration": 191821297572,
+        "lr": 0.012234657287843727,
+        "momentum": 0.6635531102967387,
+        "transform": "norm_flip",
+        "uid": "902883b0035025884055bd73a4830504",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
         "accuracy": 0.7491,
         "batch": 4,
         "duration": 428586978822,

@@ -28,5 +28,27 @@
         "momentum": 0.641774708149249,
         "transform": "norm_299",
         "uid": "d30d97f98de92a698f6bd4597a950c11"
+    },
+    {
+        "accuracy": 0.1396,
+        "batch": 4,
+        "dropout": 0.031649962527762476,
+        "duration": 412339910149,
+        "lr": 1.0926952873221992e-05,
+        "lr_now": 1.0926952873221992e-05,
+        "momentum": 0.7223399080014088,
+        "transform": "bf-v1-RandomGrayscale_RandomHorizontalFlip_4",
+        "uid": "181b429338e4ac8b7d6847e8bb32d560",
+        "train_stat": {
+            "train_loss": 2.301914999599457,
+            "test_loss": 2.301894717121124,
+            "train_accuracy": 0.13906,
+            "gradient_norm": 0.7057264639818065,
+            "samples_per_second": 611.4017828962078,
+            "best_accuracy": 0.1627,
+            "best_epoch": 2,
+            "epoch_max": 5,
+            "gpu_memory_kb": 312342.5
+        }
     }
 ]

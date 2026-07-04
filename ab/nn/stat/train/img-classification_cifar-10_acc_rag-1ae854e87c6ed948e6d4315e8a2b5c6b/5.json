@@ -1,0 +1,81 @@
+[
+    {
+        "accuracy": 0.4036,
+        "batch": 128,
+        "duration": 581692900983,
+        "lr": 0.01528177357801514,
+        "momentum": 0.8309414555698819,
+        "transform": "norm_512_flip",
+        "uid": "a095aa7683d769d7e17e094d4b1c997f",
+        "train_stat": {
+            "epoch_max": 50
+        }
+    },
+    {
+        "accuracy": 0.3858,
+        "batch": 128,
+        "duration": 1967760589480,
+        "lr": 0.01528177357801514,
+        "metric_acc": 0.3858,
+        "momentum": 0.8309414555698819,
+        "transform": "norm_512_flip",
+        "uid": "68b0d26d8ae56de0decdc5a7d56f158d",
+        "train_stat": {
+            "train_loss": 1.6952107047180995,
+            "test_loss": 1.6913607618476771,
+            "train_accuracy": 0.38886,
+            "gradient_norm": 1.5921685189561376,
+            "samples_per_second": 128.45257399193218,
+            "best_accuracy": 0.3879,
+            "best_epoch": 4,
+            "epoch_max": 50,
+            "cpu_count": 24,
+            "cpu_type": "x86_64",
+            "cpu_usage_percent": 0.8,
+            "total_ram_kb": 32627548.0,
+            "occupied_ram_kb": 11669612.0,
+            "ram_usage_percent": 35.8,
+            "gpu_type": "NVIDIA GeForce RTX 4090",
+            "gpu_memory_kb": 18236779.5,
+            "gpu_total_memory_kb": 24658816.0,
+            "occupied_gpu_memory_kb": 17688.0,
+            "gpu_memory_usage_percent": 0.07
+        }
+    },
+    {
+        "accuracy": 0.3746,
+        "batch": 128,
+        "duration": 1269695604762,
+        "lr": 0.01528177357801514,
+        "momentum": 0.8309414555698819,
+        "transform": "norm_512_flip",
+        "uid": "8d524def6590753eeb969674c9b6cd3c"
+    },
+    {
+        "accuracy": 0.3252,
+        "batch": 8,
+        "duration": 91751695812,
+        "lr": 0.00024403017409037708,
+        "momentum": 0.3590770803146466,
+        "transform": "bf-v1-CenterCrop_RandomPosterize_RandomRotation",
+        "uid": "fc2c2888101e9b69a9c02f9fb261ac6b"
+    },
+    {
+        "accuracy": 0.2092,
+        "batch": 64,
+        "duration": 73457730237,
+        "lr": 0.0002508518748139156,
+        "momentum": 0.2975446258228417,
+        "transform": "bf-v1-RandomHorizontalFlip_RandomAutocontrast_CenterCrop",
+        "uid": "2e6c93038db7b8a49d273a387be8b10d"
+    },
+    {
+        "accuracy": 0.1875,
+        "batch": 1,
+        "duration": 604490329239,
+        "lr": 2.5805754697416636e-05,
+        "momentum": 0.4762337893188271,
+        "transform": "echo_256",
+        "uid": "6a2e80d3db9ccfa4baebec7882e84b1c"
+    }
+]
