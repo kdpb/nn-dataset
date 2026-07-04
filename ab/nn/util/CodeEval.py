@@ -5,6 +5,7 @@ import logging
 import os
 import pprint
 import subprocess
+import sys
 from os import makedirs
 
 import torch
@@ -28,16 +29,20 @@ def run_pylint(file_path):
     max_line_length = 120
     disable_errors = ['C0116', 'C0115', 'C0114', 'C0304', 'C0303', 'C0305', 'C0325']  # For docstrings and missing newline and whitespace
     command = [
-        'pylint', file_path,
+        sys.executable, '-m', 'pylint', file_path,
         '--output-format=json',
         f'--max-line-length={max_line_length}'
     ]
     if disable_errors:
         disable_str = ",".join(disable_errors)
         command.append(f'--disable={disable_str}')
-    
-    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    
+
+    try:
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    except Exception as e:
+        logging.warning("Pylint execution failed for %s: %s", file_path, e)
+        return []
+
     if result.stdout:
         try:
             errors = json.loads(result.stdout)
@@ -45,6 +50,9 @@ def run_pylint(file_path):
         except json.JSONDecodeError as e:
             print(f"JSON decode error in Pylint output for {file_path}: {e}")
             return []
+
+    if result.returncode not in (0, 1, 2, 4, 8, 16, 32):
+        logging.warning("Unexpected pylint return code %s for %s", result.returncode, file_path)
     return []
 
 # Complexity Analysis
@@ -196,7 +204,9 @@ def evaluate_code_quality(file_path):
         report['complexity'] = complexity_report
 
         # Dynamic evaluation
-        dynamic_success, dynamic_output = dynamic_evaluation(file_path, class_name='Net')
+        dynamic_result = dynamic_evaluation(file_path, class_name='Net')
+        dynamic_success = bool(dynamic_result.get('success', False))
+        dynamic_output = dynamic_result.get('output', '')
         report['dynamic_evaluation'] = {
             'success': dynamic_success,
             'output': dynamic_output
@@ -238,10 +248,13 @@ def evaluate_directory_code_quality(directory):
 def evaluate_single_file(file_path):
     print(f"Evaluating {file_path}...")
     success, report = evaluate_code_quality(file_path)
-    if success:
-        return report
-    else:
-        return None
+    if not isinstance(report, dict):
+        return {'score': 0.0, 'error': 'invalid quality report'}
+    if 'score' not in report:
+        report['score'] = 0.0
+    if not success and 'error' not in report:
+        report['error'] = 'code quality evaluation failed'
+    return report
 
 # Main Function
 if __name__ == "__main__":
