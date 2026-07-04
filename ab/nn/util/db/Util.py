@@ -54,6 +54,10 @@ def nn_mod(*nms):
     mod = ".".join(to_nn + nms)    
     lemur_root = get_package_location(nn_dataset) if is_lemur_dependency else ab_root_path    
     code_file = lemur_root / (mod.replace('.', '/') + '.py')
+    package_root = Path(__file__).resolve().parents[4]
+    package_code_file = package_root / (mod.replace('.', '/') + '.py')
+    if not code_file.exists() and package_code_file.exists():
+        return mod
     if not code_file.exists():
         code_file.parent.mkdir(parents=True, exist_ok=True)
         mod_l = mod.split('.')
@@ -75,4 +79,3 @@ def min_accuracy(dataset):
         return 0.0 
     except Exception:
         return 0.0
-
